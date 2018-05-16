@@ -13,23 +13,23 @@ html, body {
 }
 
 #map {
-  height: calc(100% - 50px);
+  height: 100%;
   width: 100vw;
-  background-color: #cfcfcf;
+  background-color: #252525;
 }
 
 #map-blackout {
-  height: calc(100% - 50px);
+  height: 100vh;
   width: 100vw;
   position: absolute;
-  top: 50px;
+  top: 0;
   margin: 0;
 
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #f00;
   color: #666;
   font-size: 1.5em;
   
@@ -41,7 +41,7 @@ html, body {
 
 #map-blackout.toggled_on {
   visibility: visible;
-  opacity: 0.8;        /* DEBUG - make 1 for production */
+  opacity: 0.3;        /* DEBUG - make 1 for production */
 }
 
 #map-blackout h2 {
@@ -62,7 +62,7 @@ html, body {
 
 /* header bar */
 
-header {
+/* header {
   height: 50px;
   width: calc(100vw - 20px);
   padding: 0 10px;
@@ -74,9 +74,9 @@ header {
 
   background-color: #222;
   color: #eee;
-}
+} */
 
-h1, h2, header ul, button {
+h1, h2, button {
   font-family: 'Zilla Slab', sans-serif;
   text-shadow: 2px 2px #333;
   font-weight: 500;
@@ -178,11 +178,11 @@ div#about {
   
   z-index: 1000;
   position: absolute;
-  top: 50px;
+  top: 0;
   margin: 0;
   padding: 20px;
   width: calc(100vw - 40px);
-  height: calc(100vh - 90px);
+  height: calc(100vh - 40px);
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -227,7 +227,7 @@ div#about a:active, div#about a:hover, div#about a:visited
   padding: 0 20px;
   /* TODO - do I need to set width explicitly? */
   max-width: calc(100vw - 40px);
-  height: calc(100vh - 50px);
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -342,13 +342,13 @@ div#about a:active, div#about a:hover, div#about a:visited
   top: 50px;
   margin: 0;
   width: 50%;
-  height: calc(100vh - 50px);
+  height: 100vh;
 
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;    /* left */
-  padding: calc(50px + 5%) 45% 5% 5%;
+  padding: 5% 45% 5% 5%;
 }
 
 @media screen and (max-aspect-ratio: 5/4) {

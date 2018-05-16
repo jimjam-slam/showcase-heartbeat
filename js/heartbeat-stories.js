@@ -8,6 +8,25 @@
 //   className: 'story_popup'
 // }
 
+// initialise timedimension and associated control + player
+// (but don't attach to the map yet)
+var td = new L.TimeDimension({
+  timeInterval: '1951-01-01T00:00:00.000Z/2017-12-01T00:00:00.000Z',
+  period: 'P1M'
+});
+var td_player = new L.TimeDimension.Player({
+  buffer: 5,     // control to taste
+  loop: true,
+  transitionTime: 250,
+  startOver: true
+}, td);
+var td_control = new L.Control.TimeDimension({
+  position: 'bottomleft',
+  speedSlider: false,
+  limitSliders: true,
+  player: td_player
+});
+
 // TODO - start turning this into proper example stories!
 
 var story_popup_opts = {

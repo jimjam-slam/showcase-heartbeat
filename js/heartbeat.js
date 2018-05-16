@@ -1,28 +1,10 @@
 /* blah */
 
-// initialise timedimension and associated control + player
-// (but don't attached to the map yet)
-var td = new L.TimeDimension({
-  timeInterval: '1951-01-01T00:00:00.000Z/2017-12-01T00:00:00.000Z',
-  period: 'P1M'
-});
-var td_player = new L.TimeDimension.Player({
-  buffer: 5,     // control to taste
-  loop: true,
-  transitionTime: 250,
-  startOver: true
-}, td);
-var td_control = new L.Control.TimeDimension({
-  position: 'bottomleft',
-  speedSlider: false,
-  limitSliders: true,
-  player: td_player
-});
 
 // initialise map; attach timedimension and its control
 var mymap = L.map('map', {
   center: [-27, 134],     // lat, lon
-  zoom: 2,
+  zoom: 4,
   crs: L.CRS.EPSG4326,    // need a matching basemap!
   zoomControl: false,
   attributionControl: false, // it's on the about screen instead
@@ -32,7 +14,7 @@ var mymap = L.map('map', {
   keyboard: false     // if this causes problems, use keyboardDelta: 0 instead
   // maxBoundsViscosity: 0.5
 });
-mymap.zoomControl.setPosition('topleft');
+// mymap.zoomControl.setPosition('topleft');
 mymap.timeDimension = td;
 mymap.addControl(td_control);
 
