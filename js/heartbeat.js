@@ -10,9 +10,10 @@ var mymap = L.map('map', {
   attributionControl: false, // it's on the about screen instead
   doubleClickZoom: false,
   boxZoom: false,
+  touchZoom: false,
+  scrollWheelZoom: false,
   dragging: false,
   keyboard: false     // if this causes problems, use keyboardDelta: 0 instead
-  // maxBoundsViscosity: 0.5
 });
 // mymap.zoomControl.setPosition('topleft');
 mymap.timeDimension = td;
