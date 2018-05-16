@@ -47,12 +47,12 @@ rec_txx_plot =
   geom_polygon(
     data = aus,
     mapping = aes(x = long, y = lat, group = group),
-    fill = '#aaaaaa', colour = '#999999') +
+    fill = '#cccccc', colour = '#999999') +
   geom_tile(
     aes(x = longitude, y = latitude, frame = date, alpha = record_age_clamped),
     fill = 'red') +
   # scale_fill_gradient(low = '#ff0000ff', high = '#33333300', na.value = '#ffffff00') +
-  scale_alpha_continuous(range = 1:0) +
+  scale_alpha_continuous(range = 1:0, na.value = 0) +
   coord_fixed(ratio = 1) +
   labs(
     x = 'Longitude',
@@ -66,7 +66,7 @@ rec_txx_plot =
 
 gganimate(rec_txx_plot,
   filename = '~/Desktop/rec_txx_ani.mp4', title_frame = TRUE,
-  interval = 1 / 12, ani.width = 1920, ani.height = 1080)
+  interval = 1 / 12, ani.width = 1080, ani.height = 1080)
 pbPost('note', 'R is done!')
 
 # txmean
@@ -104,12 +104,12 @@ rec_txa_plot =
   geom_polygon(
     data = aus,
     mapping = aes(x = long, y = lat, group = group),
-    fill = '#aaaaaa', colour = '#999999') +
+    fill = '#cccccc', colour = '#999999') +
   geom_tile(
     aes(x = longitude, y = latitude, frame = date, alpha = record_age_clamped),
-    fill = 'red')) +
+    fill = 'red') +
   # scale_fill_gradient(low = '#ff0000ff', high = '#33333300', na.value = '#ffffff00') +
-  scale_alpha_continuous(range = 1:0) +
+  scale_alpha_continuous(range = 1:0, na.value = 0) +
   coord_fixed(ratio = 1) +
   labs(
     x = 'Longitude',
@@ -123,5 +123,5 @@ rec_txa_plot =
 
 gganimate(rec_txa_plot,
   filename = '~/Desktop/rec_txmean_ani.mp4', title_frame = TRUE,
-  interval = 1 / 12, ani.width = 1920, ani.height = 1080)
+  interval = 1 / 12, ani.width = 1080, ani.height = 1080)
 pbPost('note', 'R is done!')

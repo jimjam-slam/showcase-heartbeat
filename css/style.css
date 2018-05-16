@@ -1,0 +1,786 @@
+/* full-bleed map */
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;   /* for scrollbars on safari */
+}
+
+html, body {
+  height: 100%;
+  width: 100vw;
+  min-width: 320px;
+}
+
+#map {
+  height: calc(100% - 50px);
+  width: 100vw;
+  background-color: #cfcfcf;
+}
+
+#map-blackout {
+  height: calc(100% - 50px);
+  width: 100vw;
+  position: absolute;
+  top: 50px;
+  margin: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #666;
+  font-size: 1.5em;
+  
+  z-index: 1002;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+#map-blackout.toggled_on {
+  visibility: visible;
+  opacity: 0.8;        /* DEBUG - make 1 for production */
+}
+
+#map-blackout h2 {
+  text-shadow: none;
+  margin-top: 20px;
+  font-size: 1.25em;
+}
+
+/* blending and utility modes for climdex tile layers */
+
+.blend_multiply { mix-blend-mode: multiply; }
+.blend_color { mix-blend-mode: color; }
+.blend_difference { mix-blend-mode: difference; }
+.blend_overlay { mix-blend-mode: overlay; }
+.blend_normal { mix-blend-mode: normal; }
+
+.leaflet-layer.storybit-preparing { visibility: hidden; opacity: 0; }
+
+/* header bar */
+
+header {
+  height: 50px;
+  width: calc(100vw - 20px);
+  padding: 0 10px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #222;
+  color: #eee;
+}
+
+h1, h2, header ul, button {
+  font-family: 'Zilla Slab', sans-serif;
+  text-shadow: 2px 2px #333;
+  font-weight: 500;
+  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+p, ul, ol {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text-shadow: 2px 2px #333; */
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+header h1 {
+  font-size: 1.5em;
+  color: #eee;
+  text-decoration: none;
+}
+
+header ul {
+  font-size: 1.25em;
+  list-style-type: none;
+  color: #999;
+  cursor: pointer;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li.toggled_on {
+  color: #eee;
+}
+
+header ul li + li:before {
+  color: #999;
+  content: '|';
+  font-style: normal;
+  padding-right: 10px;
+  padding-left: 8px;
+}
+
+.action_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#close-about, #close-about:hover {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+#close-about { color: #999; }
+#close-about:hover { color: #eee; }
+
+/* (squish the nav a bit on really small phones!) */
+
+@media screen and (max-width: 380px) {
+  header h1 {
+    font-size: 1.5em;
+    color: #eee;
+    text-decoration: none;
+  }
+  
+  header ul {
+    font-size: 1em;
+    list-style-type: none;
+    color: #999;
+  }
+  
+  header ul li {
+    display: inline-block;
+  }
+  
+  header ul li + li:before {
+    content: '|';
+    padding-right: 10px;
+    padding-left: 8px;
+  }
+}
+
+/* about screen */
+
+div#about {
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  
+  z-index: 1000;
+  position: absolute;
+  top: 50px;
+  margin: 0;
+  padding: 20px;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 90px);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: #222;
+  color: #eee;
+}
+
+div#about.toggled_on {
+  visibility: visible;    /* switch to display: block on toggle */
+  opacity: 1;
+}
+
+div#about a {
+  color: gold;
+  text-decoration: none;
+}
+
+#about #about-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+div#about a:active, div#about a:hover, div#about a:visited
+{
+  color: goldenrod;
+}
+
+/* story-list */
+
+#stories-list {
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  
+  z-index: 1003;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  margin: 0;
+  padding: 0 20px;
+  /* TODO - do I need to set width explicitly? */
+  max-width: calc(100vw - 40px);
+  height: calc(100vh - 50px);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: #222222cc;
+  color: #eee;
+}
+
+#stories-list.toggled_on {
+  visibility: visible;    /* switch to display: block on toggle */
+  opacity: 1;
+}
+
+#stories-list .story-menu-item {
+  padding: 20px 0;
+  display: block;
+  background: none;
+  border: none;
+  color: #eee;
+  text-align: left;
+  width: 100%;
+}
+
+/* manu item icon padding */
+#stories-list .story-menu-item svg {
+  padding-left: 10px;
+}
+
+#stories-list .story-menu-item + .story-menu-item {
+  border-top: 1px solid #999;
+}
+
+#stories-list h2 {
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+#stories-list p {
+  font-size: 1.25em;
+  margin: 0.25em 0 0 0;
+  text-transform: none;
+}
+
+#stories-list #shuffle-stories {
+  color: gold;
+} 
+
+/* story bit-bar */
+#story-bitbar {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+
+  z-index: 1001;
+  position: absolute;
+  top: 50px;
+  margin: 0;
+  width: calc(100% - 20px);
+  height: 50px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+  /* background-color: #eeeeee; */
+  background: none;
+
+  /* light striped background approach: think this might be too much...
+  /* background-color: #aaaaaa;
+  background: repeating-linear-gradient(
+    -45deg,
+    #aaaaaa,
+    #aaaaaa 4px,
+    #cccccc 4px,
+    #cccccc 8px); */
+  
+}
+
+#story-bitbar.toggled_on {
+  visibility: visible;
+  opacity: 1;
+}
+
+#story-bitbar h2 {
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1em;
+  opacity: 1;
+  text-shadow: 1px 1px 1px #eee;
+  color: #444;
+}
+
+#story-bitbar-td.disabled {
+  visibility: hidden;
+  opacity: 0;
+}
+  
+
+/* story commentary */
+
+#story-commentary {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  
+  z-index: 1002;
+  position: absolute;
+  top: 50px;
+  margin: 0;
+  width: 50%;
+  height: calc(100vh - 50px);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;    /* left */
+  padding: calc(50px + 5%) 45% 5% 5%;
+}
+
+@media screen and (max-aspect-ratio: 5/4) {
+  #story-commentary {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px 10px 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+#story-commentary.toggled_on {
+  visibility: visible;
+  opacity: 1;
+}
+
+#story-commentary p {
+  font-style: italic;
+  font-size: 6vmin;
+  text-shadow: 1px 1px 1px #666;
+
+  margin: 0 0 3vh 0;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+#story-commentary p.toggled_on {
+  visibility: visible;
+  opacity: 1;
+}
+
+#story-commentary span.emph {
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #333;
+  box-shadow: 5px 0 0 #333, -5px 0 0 #333;
+}
+
+#story-commentary a {
+  color: gold;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #333;
+  box-shadow: 5px 0 0 #333, -5px 0 0 #333;
+}
+
+/* #tour-interrupt-msg {
+  position: absolute;
+  left: 0px;
+  bottom: 100px;
+  width: calc(100vw - 100px);
+  z-index: 1003;
+
+  font-weight: 700;
+  font-size: 2em;
+  color: #333;
+  text-shadow: 2px 2px gold;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 3s linear, opacity 3s linear, left 3s ease, bottom 1s ease, color 0.25s linear;
+}
+
+#tour-interrupt-msg.toggled_on {
+  left: 50px;
+  visibility: visible;
+  opacity: 1;
+}
+
+#tour-interrupt-msg.acted_on {
+  left: 50px;
+  bottom: 110px;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+} */
+
+/* controls: layers and time */
+
+.leaflet-top.leaflet-left, .leaflet-bottom.leaflet-left {
+  background-color: gold;
+  min-height: 50px;
+  width: calc(100vw - 20px);
+  padding: 0 10px;
+  display: flex;
+  flex-flow: row wrap;
+
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.leaflet-top.leaflet-left {
+  justify-content: space-between;
+}
+
+.leaflet-bottom.leaflet-left {
+  justify-content: flex-start;
+}
+
+.leaflet-top.leaflet-left.toggled_on,
+.leaflet-bottom.leaflet-left.toggled_on {
+  visibility: visible;
+  opacity: 1;
+}
+
+.leaflet-bottom.leaflet-left .leaflet-bar-timecontrol,
+.leaflet-top.leaflet-left .leaflet-control-layers,
+.leaflet-top.leaflet-left .leaflet-control-zoom {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  background: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.leaflet-top.leaflet-left .leaflet-control-zoom {
+  order: 1;
+  flex-direction: row-reverse;
+}
+
+.leaflet-top.leaflet-left .leaflet-control-zoom a {
+  background: none;
+  border: 0;
+}
+
+.leaflet-bar a.leaflet-disabled {
+  color: #66666666
+}
+
+.leaflet-bottom.leaflet-left .leaflet-bar-timecontrol,
+.leaflet-top.leaflet-left .leaflet-control-layers
+{  
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+/* index/time selection bar */
+
+.leaflet-bottom.leaflet-left .leaflet-bar-timecontrol {
+  width: 100%;
+}
+
+.leaflet-bar-timecontrol .leaflet-control-timecontrol {
+  background: none;
+  border: 0;
+  color: #444;
+  min-width: 30px;
+  width: 30px;
+}
+
+.leaflet-bar-timecontrol .leaflet-control-timecontrol:hover {
+  background: none;
+  border: 0;
+  color: black;
+}
+
+a.leaflet-control-timecontrol.timecontrol-date,
+a.leaflet-control-timecontrol.timecontrol-date:hover,
+a.leaflet-control-timecontrol.timecontrol-date.utc,
+a.leaflet-control-timecontrol.timecontrol-date.utc:hover {
+  min-width: 70px;
+  width: auto;
+  padding-left: 30px;
+}
+
+a.leaflet-control-timecontrol.timecontrol-date.loading,
+a.leaflet-control-timecontrol.timecontrol-date.loading.utc, {
+  background-color: gold;
+}
+
+a.leaflet-control-timecontrol.timecontrol-date.loading:before,
+a.leaflet-control-timecontrol.timecontrol-date.loading.utc:before {
+  top: 1px;
+}
+
+/* timecontrol slider */
+
+.leaflet-control-timecontrol.timecontrol-slider,
+.leaflet-control-timecontrol.timecontrol-slider:hover {
+  width: 100%;
+}
+
+.leaflet-control-timecontrol.timecontrol-slider .slider {
+  height: 2px;
+  width: 100%;
+  margin-top: 14px;
+  margin-left: 0px;
+  background-color: #66666666;  /* somewhat transparent! */
+  border: none;
+}
+
+.leaflet-control-timecontrol.timecontrol-slider .slider .range {
+  height: 2px;
+  background-color: #666666;
+}
+
+/* knobs use background-clip, box-sizing and border to create an invisible
+   extended drag area. margins need to account for border + half the width
+   or height. */
+
+.leaflet-control-timecontrol.timecontrol-slider .slider .knob {
+  /* going to use these two to give knob invisible extra drag areas */
+  background-clip: content-box;
+  box-sizing: content-box;
+  
+  border-radius: 0;
+  background-color: #666;
+  border: 10px solid transparent;
+}
+
+.leaflet-control-timecontrol.timecontrol-slider .slider .knob.main {
+  height: 20px;
+  width: 4px;
+  margin-left: -12px;
+  margin-top: -19px;
+}
+
+.leaflet-control-timecontrol.timecontrol-slider .slider .knob.lower,
+.leaflet-control-timecontrol.timecontrol-slider .slider .knob.upper {
+  height: 8px;
+  width: 8px;
+  margin-left: -14px;
+  margin-top: -13px;
+}
+
+.leaflet-control-timecontrol.timecontrol-slider .slider .knob.lower:before,
+.leaflet-control-timecontrol.timecontrol-slider .slider .knob.upper:before,
+.leaflet-control-timecontrol.timecontrol-slider .slider .knob.lower:after,
+.leaflet-control-timecontrol.timecontrol-slider .slider .knob.upper:after {
+  content: none;
+}
+
+/* layer controls */
+
+.leaflet-control-layers-expanded, .leaflet-control-layers-expanded:hover {
+  padding: 0;
+}
+
+.leaflet-control-layers a.leaflet-control-layers-toggle,
+.leaflet-control-layers a.leaflet-control-layers-toggle:hover {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  background: none;
+  width: auto;
+}
+
+a.leaflet-control-layers-toggle:after {
+  content: '\25bc';
+  padding-left: 5px;
+  font-size: 0.5em;
+}
+
+.leaflet-control-layers-expanded form.leaflet-control-layers-list {
+  background-color: gold;
+  position: absolute;
+  top: 50px;
+  /* width: 250px; */
+  padding: 5px 0;
+
+  box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.15);
+  
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  max-height: calc(100vh - 180px);
+  font-size: 0.8em;
+}
+
+.baselayerlist-0 {
+  width: 220px;
+  /* border-right: 1px solid goldenrod; */
+}
+
+.baselayerlist-1 {
+  width: 90px;
+  /* border-right: 1px solid goldenrod; */
+}
+
+.baselayerlist-2 {
+  width: 140px;
+  border-right: none;
+}
+
+/* switch to vertical stacking for narrow screens */
+@media screen and (max-width: 500px) {
+  .leaflet-control-layers-expanded form.leaflet-control-layers-list {
+    flex-direction: column;
+    max-height: calc(100vh - 225px);
+  }
+  
+  .baselayerlist-0 {
+    width: calc(100vw - 100px);
+    border: none;
+  }
+
+  .baselayerlist-1, .baselayerlist-2 {
+    width: calc(100vw - 100px);
+    border-top: 1px solid goldenrod;
+    border-right: none;
+  }
+
+}
+
+form.leaflet-control-layers-list label {
+  /* border: 2px solid red; */
+  padding: 5px 10px;
+  text-align: left;
+}
+
+form.leaflet-control-layers-list label:hover {
+  background-color: goldenrod;
+}
+
+form.leaflet-control-layers-list label div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+form.leaflet-control-layers-list input[type="radio"] {
+  display: none;
+}
+
+form.leaflet-control-layers-list input[type="radio"] + span {
+  /* padding-left: 30px; */
+  display: none;
+}
+
+form.leaflet-control-layers-list .baselayerlist-0 input[type="radio"] + span {
+  display: inline-block;
+  padding-left: 5px;
+  opacity: 0.5;
+}
+
+form.leaflet-control-layers-list p {
+  font-family: 'Oswald', sans-serif;
+  text-shadow: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+form.leaflet-control-layers-list .baselayerlist-0 p {
+  display: inline-block;
+}
+
+form.leaflet-control-layers-list input[type="radio"]:checked ~ p::before {
+  content: '> ';
+  padding-left: 5px;
+}
+
+form.leaflet-control-layers-list input[type="radio"]:disabled ~ p {
+  text-decoration: line-through #66666666 solid;
+  color: #66666666;
+}
+
+/* form.leaflet-control-layers-list input[type="radio"]:disabled ~ p::before {
+  content: 'X ';
+} */
+
+/* wmslegend control */
+
+.leaflet-bottom.leaflet-right .leaflet-control {
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+.leaflet-control-wms-legend, .leaflet-control-wms-legend:hover {
+  background: none;
+  box-shadow: none;
+  display: flex;
+  flex: row nowrap;
+  align-items: flex-start;
+}
+
+.leaflet-bottom.leaflet-right .leaflet-control.legend-on-timebar {
+  margin-bottom: 52px;
+}
+
+.leaflet-control-wms-legend.wms-legend-collapsed {
+  border: 2px solid rgba(0,0,0,0.2);
+  background-color: #ffffff;
+  border-radius: 4px;
+  background-clip: padding-box;
+  width: 25px;
+  height: 25px;
+}
+
+.wms-legend-label {
+  text-shadow: 1px 1px #ccc;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0 5px;
+}
+
+/* story popup styling (probably won't be used now!) */
+
+.story-popup {
+  margin: 0;
+}
+
+.story-popup > .leaflet-popup-content-wrapper {
+  background: none;
+  box-shadow: none;
+}
+
+.story-popup > .leaflet-popup-tip-container {
+  display: none;
+}
+
+div.leaflet-popup.story-popup p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4em;
+  text-shadow: 1px 1px #999;
+  /* text-shadow: none; */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+div.leaflet-popup.story-popup p span.red {
+  color: red;
+}
