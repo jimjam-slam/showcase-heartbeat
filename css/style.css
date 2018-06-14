@@ -284,7 +284,7 @@ div#about a:active, div#about a:hover, div#about a:visited
 
   z-index: 1001;
   position: absolute;
-  top: 50px;
+  top: 0;
   margin: 0;
   width: calc(100% - 20px);
   height: 50px;
@@ -433,18 +433,12 @@ div#about a:active, div#about a:hover, div#about a:visited
 /* controls: layers and time */
 
 .leaflet-bottom.leaflet-left {
-  background-color: gold;
+  background-color: none;
   min-height: 50px;
   width: calc(100vw - 20px);
   padding: 0 10px;
   display: flex;
   flex-flow: row wrap;
-
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-
-  /*transition: visibility 0.3s linear, opacity 0.3s linear;
-  visibility: hidden;
-  opacity: 0;*/
 }
 
 .leaflet-top.leaflet-left {
@@ -504,7 +498,7 @@ div#about a:active, div#about a:hover, div#about a:visited
 .leaflet-bar-timecontrol .leaflet-control-timecontrol {
   background: none;
   border: 0;
-  color: #444;
+  color: #666;
   min-width: 30px;
   width: 30px;
 }

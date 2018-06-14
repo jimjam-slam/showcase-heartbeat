@@ -39,9 +39,9 @@ L.Control.TimeDimensionCustom = L.Control.TimeDimension.include({
   /* override for fluid slider width */
   _createSliderTime: function(className, container) {
     var sliderContainer,
-        sliderbar,
-        max,
-        knob, limits;
+      sliderbar,
+      max,
+      knob, limits;
     sliderContainer = L.DomUtil.create('div', className, container);
     /*L.DomEvent
         .addListener(sliderContainer, 'click', L.DomEvent.stopPropagation)
@@ -51,105 +51,150 @@ L.Control.TimeDimensionCustom = L.Control.TimeDimension.include({
     max = this._timeDimension.getAvailableTimes().length - 1;
 
     if (this.options.limitSliders) {
-        limits = this._limitKnobs = this._createLimitKnobs(sliderbar);
+      limits = this._limitKnobs = this._createLimitKnobs(sliderbar);
     }
     knob = new L.UI.Knob(sliderbar, {
-        className: 'knob main',
-        rangeMin: 0,
-        rangeMax: max
+      className: 'knob main',
+      rangeMin: 0,
+      rangeMax: max
     });
     knob.on('dragend', function(e) {
-        var value = e.target.getValue();
-        this._sliderTimeValueChanged(value);
-        this._slidingTimeSlider = false;
+      var value = e.target.getValue();
+      this._sliderTimeValueChanged(value);
+      this._slidingTimeSlider = false;
     }, this);
     knob.on('drag', function(e) {
-        this._slidingTimeSlider = true;
-        var time = this._timeDimension.getAvailableTimes()[e.target.getValue()];
-        if (time) {
-            var date = new Date(time);
-            if (this._displayDate) {
-              this._displayDate.innerHTML = this._getDisplayDateFormat(date);
-            }
-            if (this.options.timeSliderDragUpdate){
-                this._sliderTimeValueChanged(e.target.getValue());
-            }
+      this._slidingTimeSlider = true;
+      var time = this._timeDimension.getAvailableTimes()[e.target.getValue()];
+      if (time) {
+        var date = new Date(time);
+        if (this._displayDate) {
+          this._displayDate.innerHTML = this._getDisplayDateFormat(date);
         }
+        if (this.options.timeSliderDragUpdate){
+          this._sliderTimeValueChanged(e.target.getValue());
+        }
+      }
     }, this);
 
     knob.on('predrag', function() {
-        var minPosition, maxPosition;
-        if (limits) {
-            //limits the position between lower and upper knobs
-            minPosition = limits[0].getPosition();
-            maxPosition = limits[1].getPosition();
-            if (this._newPos.x < minPosition) {
-                this._newPos.x = minPosition;
-            }
-            if (this._newPos.x > maxPosition) {
-                this._newPos.x = maxPosition;
-            }
+      var minPosition, maxPosition;
+      if (limits) {
+        //limits the position between lower and upper knobs
+        minPosition = limits[0].getPosition();
+        maxPosition = limits[1].getPosition();
+        if (this._newPos.x < minPosition) {
+          this._newPos.x = minPosition;
         }
+        if (this._newPos.x > maxPosition) {
+          this._newPos.x = maxPosition;
+        }
+      }
     }, knob);
     L.DomEvent.on(sliderbar, 'click', function(e) {
-        if (L.DomUtil.hasClass(e.target, 'knob')) {
-            return; //prevent value changes on drag release
+      if (L.DomUtil.hasClass(e.target, 'knob')) {
+        return; //prevent value changes on drag release
+      }
+      var first = (e.touches && e.touches.length === 1 ? e.touches[0] : e),
+        x = L.DomEvent.getMousePosition(first, sliderbar).x;
+      if (limits) { // limits exits
+        if (limits[0].getPosition() <= x && x <= limits[1].getPosition()) {
+          knob.setPosition(x);
+          this._sliderTimeValueChanged(knob.getValue());
         }
-        var first = (e.touches && e.touches.length === 1 ? e.touches[0] : e),
-            x = L.DomEvent.getMousePosition(first, sliderbar).x;
-        if (limits) { // limits exits
-            if (limits[0].getPosition() <= x && x <= limits[1].getPosition()) {
-                knob.setPosition(x);
-                this._sliderTimeValueChanged(knob.getValue());
-            }
-        } else {
-            knob.setPosition(x);
-            this._sliderTimeValueChanged(knob.getValue());
-        }
+      } else {
+        knob.setPosition(x);
+        this._sliderTimeValueChanged(knob.getValue());
+      }
 
     }, this);
 
-    /* my addition: on map resize, recalculate slider and knob. can assue a map
-       b/c this fn gets called by onAdd */
+    /* my addition: on map resize, recalculate slider and knob. can assume a
+        map b/c this fn gets called by onAdd */
     L.DomEvent.on(this._map, 'resize', function() {
-      // css is enough for the _main_ sliderbar; just need to handle the knob
-      console.log('Knob value: ' + knob.getValue());
-      console.log('Knob position: ' + knob.getPosition());
-      console.log('Knob min: ' + knob.getMinValue());
-      console.log('Knob max: ' + knob.getMaxValue());
-      console.log('sliderContainer...');
-      console.log(L.DomUtil.getStyle(sliderContainer, 'width'));
-      // knob.setPosition(knob.getPosition());
+      if (limits) {
+      var lknob = limits[0],
+          uknob = limits[1],
+          lknob_value = lknob.getValue(),
+          uknob_value = uknob.getValue(),
+          knob_value = knob.getValue();
 
-      // okay, need to use a fixed width in css to ake this work. start w/ 100px
-      // var kno
-      var knob_value = knob.getValue();
-      sliderbar.style.width = L.DomUtil.getStyle(sliderContainer, 'width');
+      // order of knob/bar movement should be fine regardless of direction
+      sliderbar.style.width =
+          L.DomUtil.getStyle(sliderContainer, 'width');
       knob.setValue(knob_value);
-      
-      
+      lknob.setValue(lknob_value);
+      uknob.setValue(uknob_value);
+
+      // range bar?
+      var rangebar;
+      for (i = 0; i < sliderbar.children.length; i++) {
+          if (sliderbar.children[i].classList.contains('range'))
+            rangebar = sliderbar.children[i];
+      }
+      L.DomUtil.setPosition(rangebar, L.point(lknob.getPosition(), 0));
+      rangebar.style.width =
+          uknob.getPosition() - lknob.getPosition() + 'px';
+      } else {
+      var knob_value = knob.getValue();
+      sliderbar.style.width =
+          L.DomUtil.getStyle(sliderContainer, 'width');
+      knob.setValue(knob_value);
+      }
     }, this);
+        
     knob.setPosition(0);
-    
     return knob;
   },
 
+  /* also override so that i can resize the fixed width on page load */
   addTo: function() {
     //To be notified AFTER the component was added to the DOM
     L.Control.prototype.addTo.apply(this, arguments);
 
-    // get a handle to the slider container via the entire control's container
-    var sliderContainer;
+    // get handles to the slider container and rangebar
+    // via the entire control's container
+    var sliderContainer, sliderbar;
     for (i = 0; i < this._container.children.length; i++) {
-      console.log(this._container.children[i].classList);
       if (this._container.children[i].classList.contains('timecontrol-slider'))
+      {
         sliderContainer = this._container.children[i];
+        sliderbar = sliderContainer.firstChild;
+      }
     }
-    // get the knob's current value, then update the sliderbar, then the knob
-    var knob_value = this._sliderTime.getValue();
-    sliderContainer.firstChild.style.width =
-      L.DomUtil.getStyle(sliderContainer, 'width');
-    this._sliderTime.setValue(knob_value);
+
+    if (this._limitKnobs) {
+      var lknob = this._limitKnobs[0],
+        uknob = this._limitKnobs[1],
+        knob = this._sliderTime,
+        lknob_value = lknob.getValue(),
+        uknob_value = uknob.getValue(), 
+        knob_value = knob.getValue();
+        
+      // order of knob/bar movement should be fine regardless of direction
+      sliderbar.style.width =
+        L.DomUtil.getStyle(sliderContainer, 'width');
+      knob.setValue(knob_value);
+      lknob.setValue(lknob_value);
+      uknob.setValue(uknob_value);
+      
+      // get handle to range bar, then update that too
+      var rangebar;
+      for (i = 0; i < sliderbar.children.length; i++) {
+        if (sliderbar.children[i].classList.contains('range'))
+          rangebar = sliderbar.children[i];
+      }
+      L.DomUtil.setPosition(rangebar, L.point(lknob.getPosition(), 0));
+      rangebar.style.width =
+        uknob.getPosition() - lknob.getPosition() + 'px';
+
+    } else {
+      var knob = this._sliderTime,
+        knob_value = knob.getValue();
+      sliderbar.style.width =
+        L.DomUtil.getStyle(sliderContainer, 'width');
+      knob.setValue(knob_value);
+    }
 
     this._onPlayerStateChange();
     this._onTimeLimitsChanged();
@@ -160,7 +205,9 @@ L.Control.TimeDimensionCustom = L.Control.TimeDimension.include({
 
 L.Map.addInitHook(function() {
   if (this.options.timeDimensionControl) {
-    this.timeDimensionControl = new L.Control.TimeDimensionCustom(this.options.timeDimensionControlOptions || {});
+    this.timeDimensionControl =
+      new L.Control.TimeDimensionCustom(
+        this.options.timeDimensionControlOptions || {});
     // this.addControl(this.timeDimensionControl);
   }
 });

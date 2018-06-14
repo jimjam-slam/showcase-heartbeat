@@ -9,13 +9,15 @@ var td = new L.TimeDimension({
 var td_player = new L.TimeDimension.Player({
   buffer: 5,     // control to taste
   loop: true,
-  transitionTime: 250,
-  startOver: true
+  transitionTime: 80,
+  startOver: false
 }, td);
 var td_control = new L.Control.TimeDimension({
   position: 'bottomleft',
   speedSlider: false,
   limitSliders: false,
+  backwardButton: false,
+  forwardButton: false,
   player: td_player
 });
 
@@ -80,6 +82,23 @@ var geoserver_base = 'https://climdex.org/geoserver/showcase/wms?',
           updateWhenIdle: false
         }),
       { cache: 67 }).addTo(mymap);
+      
+// set initial view (and ensure it recalculates on container resize)
+function reset_view() {
+  var map_size = mymap.getSize(),
+      aspect = map_size.x / (map_size.y);
+
+  mymap.flyToBounds([[-11, 113], [-44, 154]],
+  {
+    paddingTopLeft: aspect <= 1.25 ?                   // max aspect ratio
+      [0,              ((map_size.y) / 3)] :           // portrait padding
+      [map_size.x / 3, 0],                             // landscape padding
+    paddingBottomRight: [0, 0],
+    animate: false
+  });
+}
+reset_view();
+mymap.on('resize', reset_view)
 
 // populate story menu and attach story-related event listeners
 // $('#shuffle-stories').on('click touch', random_story);
