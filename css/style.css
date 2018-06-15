@@ -62,19 +62,23 @@ html, body {
 
 /* header bar */
 
-/* header {
+header {
   height: 50px;
   width: calc(100vw - 20px);
   padding: 0 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1005;
 
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 
-  background-color: #222;
+  background-color: none;
   color: #eee;
-} */
+}
 
 h1, h2, button {
   font-family: 'Zilla Slab', sans-serif;
@@ -180,7 +184,7 @@ div#about {
   position: absolute;
   top: 0;
   margin: 0;
-  padding: 20px;
+  padding: 70px 20px 20px 20px;
   width: calc(100vw - 40px);
   height: calc(100vh - 40px);
   overflow-x: hidden;
