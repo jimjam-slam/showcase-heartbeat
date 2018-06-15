@@ -25,6 +25,7 @@ var td_control = new L.Control.TimeDimension({
 var mymap = L.map('map', {
   center: [-27, 134],     // lat, lon
   zoom: 4,
+  zoomSnap: 0.25,             // defualt 1
   crs: L.CRS.EPSG4326,    // need a matching basemap!
   zoomControl: false,
   attributionControl: false, // it's on the about screen instead
@@ -91,9 +92,9 @@ function reset_view() {
   mymap.flyToBounds([[-11, 113], [-44, 154]],
   {
     paddingTopLeft: aspect <= 1.25 ?                   // max aspect ratio
-      [0,              ((map_size.y) / 3)] :           // portrait padding
-      [map_size.x / 3, 0],                             // landscape padding
-    paddingBottomRight: [0, 0],
+      [10,              ((map_size.y) / 2)] :           // portrait padding
+      [map_size.x / 2, 10],                             // landscape padding
+    paddingBottomRight: [10, 10],
     animate: false
   });
 }
