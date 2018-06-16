@@ -180,7 +180,7 @@ div#about {
   display: block;
   transition: visibility 0.3s linear, opacity 0.3s linear;
   
-  z-index: 1000;
+  z-index: 1004;
   position: absolute;
   top: 0;
   margin: 0;
@@ -345,14 +345,24 @@ div#about a:active, div#about a:hover, div#about a:visited
   position: absolute;
   top: 50px;
   margin: 0;
-  width: 50%;
-  height: 100vh;
+  width: calc(100vw - 50px);
+  height: calc(100vh - 100px);
 
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;    /* left */
-  padding: 5% 45% 5% 5%;
+  padding: 0 25px 50px 25px;
+
+  pointer-events: none;       /* IE > 11 only! */
+}
+
+/* svg chart global css */
+
+#ts_chart {
+  width: 45%;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 @media screen and (max-aspect-ratio: 5/4) {
@@ -360,8 +370,16 @@ div#about a:active, div#about a:hover, div#about a:visited
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 70px 20px 10px 20px;
+    padding: 20px 20px 50vh 20px;
     width: calc(100% - 40px);
+    height: calc(50vh - 20px);
+  }
+
+  #ts_chart {
+    width: 80%;
+    height: 100%;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
   }
 }
 
@@ -499,6 +517,7 @@ div#about a:active, div#about a:hover, div#about a:visited
   width: 100%;
 }
 
+.leaflet-bar-timecontrol .leaflet-control-timecontrol,
 .leaflet-bar-timecontrol .leaflet-control-timecontrol {
   background: none;
   border: 0;
@@ -522,9 +541,9 @@ a.leaflet-control-timecontrol.timecontrol-date.utc:hover {
   padding-left: 30px;
 }
 
-a.leaflet-control-timecontrol.timecontrol-date.loading,
-a.leaflet-control-timecontrol.timecontrol-date.loading.utc, {
-  background-color: gold;
+.leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-date.loading,
+.leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-date.loading.utc {
+  background-color: transparent;
 }
 
 a.leaflet-control-timecontrol.timecontrol-date.loading:before,

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="576px" height="324px" viewBox="0 0 576 324" version="1.1">
+  <metadata xmlns:gridsvg="http://www.stat.auckland.ac.nz/~paul/R/gridSVG/">
+    <gridsvg:generator name="gridSVG" version="1.6-0" time="2018-06-16 14:08:01"/>
+    <gridsvg:argument name="name" value="ts_line_grid2.svg"/>
+    <gridsvg:argument name="exportCoords" value="none"/>
+    <gridsvg:argument name="exportMappings" value="none"/>
+    <gridsvg:argument name="exportJS" value="none"/>
+    <gridsvg:argument name="res" value="72"/>
+    <gridsvg:argument name="prefix" value=""/>
+    <gridsvg:argument name="addClasses" value="TRUE"/>
+    <gridsvg:argument name="indent" value="TRUE"/>
+    <gridsvg:argument name="htmlWrapper" value="FALSE"/>
+    <gridsvg:argument name="usePaths" value="vpPaths"/>
+    <gridsvg:argument name="uniqueNames" value="TRUE"/>
+    <gridsvg:separator name="id.sep" value="."/>
+    <gridsvg:separator name="gPath.sep" value="::"/>
+    <gridsvg:separator name="vpPath.sep" value="::"/>
+  </metadata>
+  <g transform="translate(0, 324) scale(1, -1)">
+    <g id="gridSVG" fill="none" stroke="rgb(0,0,0)" stroke-dasharray="none" stroke-width="0.75" font-size="12" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="0" font-weight="normal" font-style="normal">
+      <g id="layout.1" class="viewport">
+        <g id="layout.2" class="forcedgrob gtable gTree grob gDesc">
+          <defs>
+            <clipPath id="layout::background.1-9-12-1.1.clipPath">
+              <rect x="0" y="0" width="576" height="324" fill="none" stroke="none"/>
+            </clipPath>
+          </defs>
+          <g id="layout::background.1-9-12-1.1" clip-path="url(#layout::background.1-9-12-1.1.clipPath)" class="viewport"/>
+          <defs>
+            <clipPath id="layout::panel.7-5-7-5.1.clipPath">
+              <rect x="24.1" y="45.69" width="544.92" height="248.23" fill="none" stroke="none"/>
+            </clipPath>
+          </defs>
+          <g id="layout::panel.7-5-7-5.1" clip-path="url(#layout::panel.7-5-7-5.1.clipPath)" class="viewport">
+            <g id="panel.7-5-7-5.1" class="forcedgrob gTableChild gTree grob gDesc">
+              <g id="grill.gTree.133.1" class="gTree grob gDesc">
+                <g id="panel.grid.major.y..polyline.131.1" class="polyline grob gDesc">
+                  <polyline id="panel.grid.major.y..polyline.131.1.1" points="24.1,56.72 569.03,56.72" stroke-width="1.36" stroke="rgb(102,102,102)" stroke-dasharray="none" stroke-linecap="butt" stroke-opacity="1" fill="none"/>
+                  <polyline id="panel.grid.major.y..polyline.131.1.2" points="24.1,102.95 569.03,102.95" stroke-width="1.36" stroke="rgb(102,102,102)" stroke-dasharray="none" stroke-linecap="butt" stroke-opacity="1" fill="none"/>
+                  <polyline id="panel.grid.major.y..polyline.131.1.3" points="24.1,149.17 569.03,149.17" stroke-width="1.36" stroke="rgb(102,102,102)" stroke-dasharray="none" stroke-linecap="butt" stroke-opacity="1" fill="none"/>
+                  <polyline id="panel.grid.major.y..polyline.131.1.4" points="24.1,195.4 569.03,195.4" stroke-width="1.36" stroke="rgb(102,102,102)" stroke-dasharray="none" stroke-linecap="butt" stroke-opacity="1" fill="none"/>
+                  <polyline id="panel.grid.major.y..polyline.131.1.5" points="24.1,241.62 569.03,241.62" stroke-width="1.36" stroke="rgb(102,102,102)" stroke-dasharray="none" stroke-linecap="butt" stroke-opacity="1" fill="none"/>
+                  <polyline id="panel.grid.major.y..polyline.131.1.6" points="24.1,287.85 569.03,287.85" stroke-width="1.36" stroke="rgb(102,102,102)" stroke-dasharray="none" stroke-linecap="butt" stroke-opacity="1" fill="none"/>
+                </g>
+              </g>
+              <g id="GRID.polyline.125.1" class="polyline grob gDesc">
+                <polyline id="GRID.polyline.125.1.1" points="318.9,253.99 363.56,223.03 408.23,191.63 452.9,103.33 497.56,60.73 542.23,59.71" stroke="rgb(68,1,84)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.2" points="50.9,57.14 95.57,58.76 140.23,67 184.9,129.04 229.57,163.29 274.23,228.89 318.9,219.98 363.56,209.33 408.23,187.59 452.9,116.15 497.56,72.51 542.23,60.9" stroke="rgb(69,6,89)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.3" points="50.9,57.42 95.57,57.23 140.23,69.07 184.9,125.11 229.57,181.4 274.23,221.25 318.9,254.58 363.56,210.5 408.23,198.11 452.9,110 497.56,91.22 542.23,65.08" stroke="rgb(70,11,94)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.4" points="50.9,59.64 95.57,59.96 140.23,83.96 184.9,112.85 229.57,157.85 274.23,220.64 318.9,233.16 363.56,214.54 408.23,205.91 452.9,121.46 497.56,63.99 542.23,57.56" stroke="rgb(71,16,99)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.5" points="50.9,58.11 95.57,59.82 140.23,74.12 184.9,119.93 229.57,152.77 274.23,205.72 318.9,244.58 363.56,213.95 408.23,176.08 452.9,98.2 497.56,61.43 542.23,59.75" stroke="rgb(72,22,104)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.6" points="50.9,57.72 95.57,57.87 140.23,72.74 184.9,104.65 229.57,182.05 274.23,216.61 318.9,234.8 363.56,214.08 408.23,181.7 452.9,98.56 497.56,65.32 542.23,59.18" stroke="rgb(72,26,108)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.7" points="50.9,57.87 95.57,60.01 140.23,70.14 184.9,98.99 229.57,150.63 274.23,221.02 318.9,254.72 363.56,221.24 408.23,158.02 452.9,71.4 497.56,67.59 542.23,57.84" stroke="rgb(72,30,112)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.8" points="50.9,57.53 95.57,57.39 140.23,66.62 184.9,85 229.57,165.7 274.23,225.86 318.9,255.61 363.56,244.92 408.23,209.72 452.9,83.11 497.56,65.18 542.23,59.6" stroke="rgb(72,35,116)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.9" points="50.9,57.84 95.57,63.38 140.23,72.44 184.9,116.69 229.57,159.51 274.23,197.21 318.9,212.26 363.56,238.47 408.23,169.86 452.9,107.46 497.56,66.6 542.23,58.83" stroke="rgb(72,39,120)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.10" points="50.9,58.09 95.57,58.23 140.23,64.63 184.9,112.79 229.57,166.19 274.23,221.59 318.9,221.5 363.56,202.3 408.23,192.72 452.9,80.33 497.56,64.46 542.23,58.71" stroke="rgb(71,44,122)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.11" points="50.9,57.1 95.57,57.49 140.23,68.2 184.9,119.74 229.57,158.11 274.23,223.56 318.9,243.07 363.56,217.81 408.23,186.57 452.9,89.24 497.56,67.62 542.23,60.87" stroke="rgb(71,47,125)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.12" points="50.9,58.11 95.57,57.75 140.23,71.06 184.9,110.18 229.57,160.3 274.23,217.45 318.9,239.79 363.56,220.44 408.23,190.73 452.9,96.82 497.56,62 542.23,59.69" stroke="rgb(70,52,128)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.13" points="50.9,57.62 95.57,58.2 140.23,67.66 184.9,110.33 229.57,162.38 274.23,202.97 318.9,250.31 363.56,213.3 408.23,175.07 452.9,117.03 497.56,80.71 542.23,58.22" stroke="rgb(69,56,130)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.14" points="50.9,59.39 95.57,61.59 140.23,70.74 184.9,123.11 229.57,160.89 274.23,211.23 318.9,235.57 363.56,178.18 408.23,204.22 452.9,122.25 497.56,64.47 542.23,58.52" stroke="rgb(67,61,132)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.15" points="50.9,57.47 95.57,58.04 140.23,66.66 184.9,122.56 229.57,171.24 274.23,227.74 318.9,244.49 363.56,202.43 408.23,180.99 452.9,125.3 497.56,69.19 542.23,58.82" stroke="rgb(66,64,134)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.16" points="50.9,57.6 95.57,58.93 140.23,64.65 184.9,121.79 229.57,159.53 274.23,210.32 318.9,239.66 363.56,242.53 408.23,202.16 452.9,111.69 497.56,72.39 542.23,64.14" stroke="rgb(64,69,136)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.17" points="50.9,60.85 95.57,61.19 140.23,75.21 184.9,125.77 229.57,148.02 274.23,191.52 318.9,229.46 363.56,243.56 408.23,177.08 452.9,106.55 497.56,69.23 542.23,60.05" stroke="rgb(63,72,137)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.18" points="50.9,61.63 95.57,59.04 140.23,63.01 184.9,108.2 229.57,146.42 274.23,201.57 318.9,237.85 363.56,213.17 408.23,176.95 452.9,117.83 497.56,65.68 542.23,62.9" stroke="rgb(61,77,138)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.19" points="50.9,59.31 95.57,57.86 140.23,60.64 184.9,124.59 229.57,170.95 274.23,232.94 318.9,237.6 363.56,214.31 408.23,204.22 452.9,130.05 497.56,93.58 542.23,63.6" stroke="rgb(60,80,139)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.20" points="50.9,60.2 95.57,61.1 140.23,66.65 184.9,115.79 229.57,175.21 274.23,207.13 318.9,252.73 363.56,210.38 408.23,206.96 452.9,116.73 497.56,71.88 542.23,59.9" stroke="rgb(58,83,139)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.21" points="50.9,58.28 95.57,58.11 140.23,76.63 184.9,121.58 229.57,191.45 274.23,202 318.9,255.29 363.56,230.34 408.23,184.36 452.9,116.85 497.56,67.9 542.23,57.91" stroke="rgb(56,88,140)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.22" points="50.9,57.7 95.57,58.44 140.23,73.13 184.9,121.39 229.57,145.24 274.23,216.07 318.9,239.02 363.56,214.41 408.23,184.8 452.9,139.57 497.56,66.4 542.23,57.49" stroke="rgb(55,91,141)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.23" points="50.9,58.17 95.57,57.14 140.23,70.63 184.9,120.63 229.57,170.56 274.23,220.87 318.9,253.15 363.56,220.22 408.23,173.25 452.9,93.18 497.56,65.96 542.23,63.28" stroke="rgb(53,95,141)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.24" points="50.9,59.52 95.57,58.09 140.23,71.9 184.9,127.3 229.57,177.1 274.23,216.55 318.9,241.15 363.56,228.83 408.23,218.46 452.9,110.62 497.56,65.72 542.23,61.23" stroke="rgb(51,98,141)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.25" points="50.9,57.02 95.57,57.28 140.23,66.6 184.9,110.98 229.57,167.24 274.23,219.36 318.9,237.52 363.56,202.17 408.23,191.37 452.9,125.84 497.56,78.43 542.23,58.7" stroke="rgb(49,102,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.26" points="50.9,58.12 95.57,59.31 140.23,90.48 184.9,118.38 229.57,170.57 274.23,195.24 318.9,233.98 363.56,228.76 408.23,198.8 452.9,83.35 497.56,69.01 542.23,62.66" stroke="rgb(48,105,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.27" points="50.9,56.97 95.57,58.3 140.23,70.19 184.9,136.9 229.57,177.41 274.23,240.43 318.9,243.03 363.56,211.33 408.23,178.02 452.9,115.98 497.56,68.68 542.23,62.25" stroke="rgb(46,109,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.28" points="50.9,58.08 95.57,60.1 140.23,76.07 184.9,106.71 229.57,163.57 274.23,193.34 318.9,246.27 363.56,218.38 408.23,155.93 452.9,93.75 497.56,70.02 542.23,58.59" stroke="rgb(45,112,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.29" points="50.9,57.47 95.57,58.02 140.23,61 184.9,134.89 229.57,172.54 274.23,205.18 318.9,259.45 363.56,241.31 408.23,214.51 452.9,119.3 497.56,78.14 542.23,58.77" stroke="rgb(44,114,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.30" points="50.9,60.22 95.57,59.41 140.23,70.69 184.9,115.01 229.57,164.28 274.23,189.29 318.9,259.25 363.56,227.48 408.23,185.28 452.9,92.97 497.56,65.13 542.23,58.47" stroke="rgb(42,118,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.31" points="50.9,59.94 95.57,60.03 140.23,62.68 184.9,126.4 229.57,157.45 274.23,210.5 318.9,229.54 363.56,232.47 408.23,180.01 452.9,113.63 497.56,71.09 542.23,60.36" stroke="rgb(41,121,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.32" points="50.9,57.58 95.57,58.23 140.23,78.35 184.9,129.83 229.57,168.38 274.23,218.63 318.9,242.32 363.56,228.27 408.23,222.71 452.9,109.77 497.56,63.57 542.23,60.12" stroke="rgb(40,125,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.33" points="50.9,58.43 95.57,62.98 140.23,83.77 184.9,135.74 229.57,155.96 274.23,207.89 318.9,211.31 363.56,218.55 408.23,165.05 452.9,91.84 497.56,65.34 542.23,58.45" stroke="rgb(39,128,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.34" points="50.9,57.24 95.57,59.5 140.23,74 184.9,117.49 229.57,181.18 274.23,243.08 318.9,270.18 363.56,229.77 408.23,214.21 452.9,134.4 497.56,86.19 542.23,66" stroke="rgb(37,131,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.35" points="50.9,60.79 95.57,66.88 140.23,81.56 184.9,128.06 229.57,176.08 274.23,229.05 318.9,271.39 363.56,213.53 408.23,200.33 452.9,110.92 497.56,68.98 542.23,57.95" stroke="rgb(36,134,142)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.36" points="50.9,58.16 95.57,61.38 140.23,74.97 184.9,113.47 229.57,140.89 274.23,199.26 318.9,215.47 363.56,225.88 408.23,182.16 452.9,107.04 497.56,66.47 542.23,60.28" stroke="rgb(35,138,141)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.37" points="50.9,59.5 95.57,60.82 140.23,96.81 184.9,108.78 229.57,166.28 274.23,222.14 318.9,218.43 363.56,226.54 408.23,177.95 452.9,88.61 497.56,61.92 542.23,59.14" stroke="rgb(34,141,141)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.38" points="50.9,57.83 95.57,57.72 140.23,62.61 184.9,106.35 229.57,146.09 274.23,222.43 318.9,237.48 363.56,239.62 408.23,190.29 452.9,114.1 497.56,70.28 542.23,57.89" stroke="rgb(33,144,141)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.39" points="50.9,57.31 95.57,57.48 140.23,68.52 184.9,125.57 229.57,180.93 274.23,232.12 318.9,252.56 363.56,234.21 408.23,199.53 452.9,92.16 497.56,83.28 542.23,61.78" stroke="rgb(32,147,140)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.40" points="50.9,60.15 95.57,61.09 140.23,68.24 184.9,108.89 229.57,158.16 274.23,196.98 318.9,269.46 363.56,226.58 408.23,195.14 452.9,116.41 497.56,77.43 542.23,60.53" stroke="rgb(31,150,139)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.41" points="50.9,57.98 95.57,60.65 140.23,81.63 184.9,114.99 229.57,188.14 274.23,242.2 318.9,246.48 363.56,233.9 408.23,203.72 452.9,131.95 497.56,72.08 542.23,59.71" stroke="rgb(31,154,138)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.42" points="50.9,57.62 95.57,61.47 140.23,70.77 184.9,131.59 229.57,191.17 274.23,227.49 318.9,271.63 363.56,233.78 408.23,158.96 452.9,114.85 497.56,70.47 542.23,62.58" stroke="rgb(30,157,137)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.43" points="50.9,62.92 95.57,62.6 140.23,90.25 184.9,110.07 229.57,164.78 274.23,223.22 318.9,263.36 363.56,234.56 408.23,196.22 452.9,99.77 497.56,63 542.23,58.29" stroke="rgb(31,161,136)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.44" points="50.9,57.23 95.57,58.21 140.23,70.97 184.9,94.25 229.57,190.1 274.23,240.44 318.9,232.69 363.56,249.57 408.23,222.96 452.9,125.73 497.56,74.43 542.23,59.76" stroke="rgb(32,163,134)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.45" points="50.9,57.34 95.57,63.9 140.23,87.8 184.9,136.1 229.57,182.34 274.23,225.59 318.9,230.23 363.56,220.87 408.23,173.93 452.9,100.99 497.56,70.54 542.23,59.28" stroke="rgb(34,167,133)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.46" points="50.9,58.96 95.57,60.61 140.23,73.01 184.9,117.99 229.57,171.8 274.23,222.69 318.9,239.78 363.56,238.19 408.23,215.42 452.9,115.66 497.56,70.11 542.23,59.26" stroke="rgb(36,170,131)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.47" points="50.9,57.31 95.57,61.68 140.23,67.41 184.9,116.82 229.57,177.02 274.23,208.07 318.9,239.55 363.56,224.66 408.23,220.81 452.9,127.54 497.56,74.94 542.23,63.25" stroke="rgb(39,173,129)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.48" points="50.9,62.81 95.57,62.14 140.23,92.23 184.9,123.3 229.57,160.77 274.23,208.2 318.9,247.15 363.56,229.05 408.23,168.32 452.9,124.43 497.56,84.21 542.23,63.36" stroke="rgb(42,176,127)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.49" points="50.9,57.67 95.57,59.26 140.23,72.83 184.9,137.11 229.57,184.15 274.23,229.49 318.9,257.75 363.56,206.96 408.23,210.41 452.9,124.15 497.56,89.05 542.23,58.52" stroke="rgb(46,179,124)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.50" points="50.9,60.23 95.57,67.69 140.23,88.71 184.9,160.35 229.57,172.23 274.23,233.62 318.9,233.45 363.56,220.3 408.23,216.17 452.9,132.64 497.56,78.13 542.23,60.96" stroke="rgb(52,182,121)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.51" points="50.9,59.87 95.57,58.95 140.23,81.63 184.9,138.26 229.57,162.46 274.23,224.42 318.9,256.68 363.56,198.05 408.23,218.79 452.9,116.66 497.56,90.2 542.23,60.83" stroke="rgb(57,185,119)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.52" points="50.9,62.73 95.57,58.48 140.23,71.68 184.9,129.65 229.57,192.48 274.23,239.02 318.9,262.65 363.56,241.54 408.23,189.5 452.9,119.76 497.56,65.65 542.23,59.75" stroke="rgb(62,188,115)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.53" points="50.9,58.59 95.57,58.18 140.23,73.56 184.9,130.78 229.57,183.53 274.23,203.14 318.9,228.19 363.56,234.88 408.23,212.36 452.9,144.64 497.56,87.89 542.23,60.04" stroke="rgb(68,191,112)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.54" points="50.9,58.08 95.57,63.73 140.23,97.76 184.9,115.1 229.57,150.7 274.23,204.65 318.9,260.53 363.56,230.17 408.23,189.1 452.9,122.45 497.56,78.95 542.23,60.99" stroke="rgb(75,194,108)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.55" points="50.9,58.89 95.57,61.23 140.23,82.5 184.9,118.73 229.57,185.28 274.23,215.04 318.9,249.9 363.56,225.15 408.23,148.72 452.9,92.58 497.56,71.01 542.23,58.73" stroke="rgb(82,197,105)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.56" points="50.9,57.23 95.57,57.7 140.23,66.22 184.9,129.1 229.57,174.4 274.23,237.72 318.9,259.43 363.56,225.48 408.23,177.43 452.9,103.73 497.56,76.65 542.23,60.54" stroke="rgb(89,200,100)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.57" points="50.9,58.24 95.57,65.79 140.23,92.55 184.9,120.08 229.57,186.4 274.23,217.48 318.9,238.71 363.56,213.74 408.23,194.12 452.9,122.76 497.56,70.16 542.23,61.31" stroke="rgb(96,202,96)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.58" points="50.9,59.1 95.57,63.53 140.23,76.44 184.9,137.79 229.57,165.26 274.23,231.74 318.9,249.53 363.56,260.8 408.23,167.21 452.9,85.94 497.56,70.39 542.23,60.63" stroke="rgb(104,204,92)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.59" points="50.9,58.22 95.57,59.73 140.23,84.75 184.9,132.65 229.57,183.13 274.23,250.87 318.9,261.76 363.56,235.88 408.23,216.64 452.9,137.28 497.56,84.91 542.23,66.07" stroke="rgb(112,207,87)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.60" points="50.9,64.28 95.57,66.22 140.23,97.86 184.9,154.79 229.57,182.65 274.23,229.52 318.9,272.35 363.56,226.12 408.23,227.14 452.9,108.45 497.56,61.64 542.23,60.6" stroke="rgb(120,209,82)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.61" points="50.9,57.74 95.57,59.57 140.23,75.2 184.9,134.72 229.57,152.18 274.23,208.23 318.9,224.56 363.56,245.49 408.23,215.21 452.9,135.96 497.56,70.44 542.23,58.78" stroke="rgb(129,211,77)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.62" points="50.9,57.37 95.57,58.4 140.23,78.47 184.9,117.58 229.57,176.37 274.23,231.44 318.9,271.8 363.56,237.48 408.23,191.33 452.9,97.06 497.56,64.64 542.23,62.87" stroke="rgb(137,213,72)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.63" points="50.9,59.79 95.57,57.65 140.23,79.72 184.9,108.74 229.57,159.99 274.23,211.73 318.9,236.15 363.56,207.8 408.23,182.55 452.9,117.75 497.56,70.66 542.23,59.52" stroke="rgb(146,215,66)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.64" points="50.9,57.51 95.57,57.68 140.23,78.99 184.9,116.47 229.57,199.25 274.23,232.25 318.9,254.7 363.56,250.57 408.23,171.16 452.9,124.33 497.56,71.68 542.23,61.61" stroke="rgb(155,217,60)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.65" points="50.9,59 95.57,63.12 140.23,95.12 184.9,111.63 229.57,185.88 274.23,246.42 318.9,258.34 363.56,246.57 408.23,204.8 452.9,124.26 497.56,81.96 542.23,60.98" stroke="rgb(164,219,54)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.66" points="50.9,57.23 95.57,58.11 140.23,69.35 184.9,141.63 229.57,178.97 274.23,225.23 318.9,243 363.56,212.96 408.23,207.46 452.9,152.93 497.56,70.06 542.23,63.96" stroke="rgb(173,220,48)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.67" points="50.9,61.79 95.57,60.71 140.23,92.57 184.9,150.66 229.57,192.34 274.23,232.95 318.9,282.64 363.56,233.07 408.23,225.34 452.9,129.68 497.56,67.52 542.23,59.76" stroke="rgb(182,222,42)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.68" points="50.9,59.09 95.57,57.27 140.23,72.57 184.9,136.68 229.57,190.2 274.23,222.61 318.9,250.53 363.56,244.86 408.23,219.91 452.9,102.33 497.56,89.34 542.23,62.83" stroke="rgb(192,223,37)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.69" points="50.9,57.14 95.57,59.39 140.23,73.03 184.9,133.72 229.57,178.8 274.23,225.43 318.9,268.52 363.56,222.63 408.23,200.72 452.9,88.42 497.56,60.66 542.23,60.46" stroke="rgb(201,224,32)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.70" points="50.9,58.67 95.57,62.36 140.23,87.43 184.9,151.48 229.57,176.16 274.23,226.88 318.9,269.4 363.56,229.44 408.23,182.62 452.9,120.8 497.56,68.76 542.23,59.63" stroke="rgb(210,226,27)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.71" points="50.9,57.97 95.57,63.28 140.23,89.26 184.9,117.89 229.57,201.21 274.23,237.64 318.9,262.3 363.56,248.68 408.23,195.6 452.9,150.25 497.56,82.97 542.23,60.74" stroke="rgb(219,227,25)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.72" points="50.9,67.48 95.57,67.7 140.23,98.05 184.9,125.62 229.57,159.26 274.23,218.05 318.9,272.68 363.56,241.13 408.23,205.94 452.9,97.54 497.56,61.8 542.23,57.55" stroke="rgb(228,228,25)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.73" points="50.9,58.68 95.57,57.78 140.23,68.75 184.9,131.01 229.57,176.96 274.23,209.07 318.9,253.12 363.56,210.3 408.23,178.61 452.9,109.54 497.56,66.53 542.23,58.16" stroke="rgb(236,229,27)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.74" points="50.9,59.59 95.57,58.33 140.23,78.02 184.9,124.84 229.57,192.06 274.23,245.83 318.9,267.72 363.56,229.21 408.23,217.36 452.9,115.64 497.56,87.39 542.23,63.36" stroke="rgb(245,230,31)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+                <polyline id="GRID.polyline.125.1.75" points="50.9,60.23 95.57,59.32 140.23,89.66 184.9,144.6 229.57,184.89 274.23,231.58" stroke="rgb(253,231,37)" fill="none" stroke-width="1.07" stroke-dasharray="none" stroke-linecap="butt" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1"/>
+              </g>
+            </g>
+          </g>
+          <g id="layout::spacer.8-6-8-6.1" class="viewport"/>
+          <g id="layout::spacer.8-4-8-4.1" class="viewport"/>
+          <g id="layout::spacer.6-6-6-6.1" class="viewport"/>
+          <g id="layout::spacer.6-4-6-4.1" class="viewport"/>
+          <g id="layout::axis-t.6-5-6-5.1" class="viewport"/>
+          <g id="layout::axis-l.7-4-7-4.1" class="viewport">
+            <g id="layout::axis-l.7-4-7-4::GRID.VP.26.1" class="viewport">
+              <g id="axis-l.7-4-7-4.1" class="forcedgrob gTableChild absoluteGrob gTree grob gDesc">
+                <g id="layout::axis-l.7-4-7-4::GRID.VP.26::axis.1" class="viewport">
+                  <g id="axis.1" class="forcedgrob gtable gTree grob gDesc">
+                    <g id="layout::axis-l.7-4-7-4::GRID.VP.26::axis::axis.1-1-1-1.1" class="viewport">
+                      <g id="layout::axis-l.7-4-7-4::GRID.VP.26::axis::axis.1-1-1-1::GRID.VP.24.1" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke-opacity="1" font-weight="normal" font-style="normal" class="viewport">
+                        <g id="layout::axis-l.7-4-7-4::GRID.VP.26::axis::axis.1-1-1-1::GRID.VP.24::GRID.VP.25.1" class="viewport">
+                          <g id="axis.1-1-1-1.1" class="forcedgrob gTableChild titleGrob gTree grob gDesc">
+                            <g id="GRID.text.142.1" class="text grob gDesc">
+                              <g id="GRID.text.142.1.1" transform="translate(17.83, 56.72)" stroke-width="0.1">
+                                <g id="GRID.text.142.1.1.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.142.1.1.text" text-anchor="end" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.142.1.1.tspan.1" dy="4.54" x="0">0</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.142.1.2" transform="translate(17.83, 102.95)" stroke-width="0.1">
+                                <g id="GRID.text.142.1.2.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.142.1.2.text" text-anchor="end" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.142.1.2.tspan.1" dy="4.54" x="0">5</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.142.1.3" transform="translate(17.83, 149.17)" stroke-width="0.1">
+                                <g id="GRID.text.142.1.3.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.142.1.3.text" text-anchor="end" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.142.1.3.tspan.1" dy="4.54" x="0">10</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.142.1.4" transform="translate(17.83, 195.4)" stroke-width="0.1">
+                                <g id="GRID.text.142.1.4.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.142.1.4.text" text-anchor="end" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.142.1.4.tspan.1" dy="4.54" x="0">15</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.142.1.5" transform="translate(17.83, 241.62)" stroke-width="0.1">
+                                <g id="GRID.text.142.1.5.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.142.1.5.text" text-anchor="end" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.142.1.5.tspan.1" dy="4.54" x="0">20</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.142.1.6" transform="translate(17.83, 287.85)" stroke-width="0.1">
+                                <g id="GRID.text.142.1.6.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.142.1.6.text" text-anchor="end" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.142.1.6.tspan.1" dy="4.54" x="0">25</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                    <g id="layout::axis-l.7-4-7-4::GRID.VP.26::axis::axis.1-2-1-2.1" class="viewport"/>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="layout::axis-r.7-6-7-6.1" class="viewport"/>
+          <g id="layout::axis-b.8-5-8-5.1" class="viewport">
+            <g id="layout::axis-b.8-5-8-5::GRID.VP.23.1" class="viewport">
+              <g id="axis-b.8-5-8-5.1" class="forcedgrob gTableChild absoluteGrob gTree grob gDesc">
+                <g id="layout::axis-b.8-5-8-5::GRID.VP.23::axis.1" class="viewport">
+                  <g id="axis.2" class="forcedgrob gtable gTree grob gDesc">
+                    <g id="layout::axis-b.8-5-8-5::GRID.VP.23::axis::axis.1-1-1-1.1" class="viewport"/>
+                    <g id="layout::axis-b.8-5-8-5::GRID.VP.23::axis::axis.2-1-2-1.1" class="viewport">
+                      <g id="layout::axis-b.8-5-8-5::GRID.VP.23::axis::axis.2-1-2-1::GRID.VP.21.1" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke-opacity="1" font-weight="normal" font-style="normal" class="viewport">
+                        <g id="layout::axis-b.8-5-8-5::GRID.VP.23::axis::axis.2-1-2-1::GRID.VP.21::GRID.VP.22.1" class="viewport">
+                          <g id="axis.2-1-2-1.1" class="forcedgrob gTableChild titleGrob gTree grob gDesc">
+                            <g id="GRID.text.136.1" class="text grob gDesc">
+                              <g id="GRID.text.136.1.1" transform="translate(50.9, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.1.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.1.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.1.tspan.1" dy="9.07" x="0">JUL</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.2" transform="translate(95.57, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.2.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.2.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.2.tspan.1" dy="9.07" x="0">AUG</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.3" transform="translate(140.23, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.3.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.3.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.3.tspan.1" dy="9.07" x="0">SEP</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.4" transform="translate(184.9, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.4.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.4.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.4.tspan.1" dy="9.07" x="0">OCT</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.5" transform="translate(229.57, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.5.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.5.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.5.tspan.1" dy="9.07" x="0">NOV</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.6" transform="translate(274.23, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.6.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.6.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.6.tspan.1" dy="9.07" x="0">DEC</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.7" transform="translate(318.9, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.7.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.7.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.7.tspan.1" dy="9.07" x="0">JAN</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.8" transform="translate(363.56, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.8.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.8.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.8.tspan.1" dy="9.07" x="0">FEB</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.9" transform="translate(408.23, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.9.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.9.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.9.tspan.1" dy="9.07" x="0">MAR</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.10" transform="translate(452.9, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.10.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.10.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.10.tspan.1" dy="9.07" x="0">APR</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.11" transform="translate(497.56, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.11.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.11.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.11.tspan.1" dy="9.07" x="0">MAY</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                              <g id="GRID.text.136.1.12" transform="translate(542.23, 39.41)" stroke-width="0.1">
+                                <g id="GRID.text.136.1.12.scale" transform="scale(1, -1)">
+                                  <text x="0" y="0" id="GRID.text.136.1.12.text" text-anchor="middle" font-size="11.2" stroke="rgb(102,102,102)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(102,102,102)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                                    <tspan id="GRID.text.136.1.12.tspan.1" dy="9.07" x="0">JUN</tspan>
+                                  </text>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="layout::xlab-t.5-5-5-5.1" class="viewport"/>
+          <g id="layout::xlab-b.9-5-9-5.1" class="viewport">
+            <g id="layout::xlab-b.9-5-9-5::GRID.VP.27.1" font-size="14" stroke="rgb(255,255,255)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke-opacity="1" font-weight="normal" font-style="normal" class="viewport">
+              <g id="layout::xlab-b.9-5-9-5::GRID.VP.27::GRID.VP.28.1" class="viewport">
+                <g id="xlab-b.9-5-9-5.1" class="forcedgrob gTableChild titleGrob gTree grob gDesc">
+                  <g id="GRID.text.148.1" class="text grob gDesc">
+                    <g id="GRID.text.148.1.1" transform="translate(296.56, 20.84)" stroke-width="0.1">
+                      <g id="GRID.text.148.1.1.scale" transform="scale(1, -1)">
+                        <text x="0" y="0" id="GRID.text.148.1.1.text" text-anchor="middle" font-size="14" stroke="rgb(255,255,255)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(255,255,255)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                          <tspan id="GRID.text.148.1.1.tspan.1" dy="11.34" x="0">MONTH</tspan>
+                        </text>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="layout::ylab-l.7-3-7-3.1" class="viewport"/>
+          <g id="layout::ylab-r.7-7-7-7.1" class="viewport"/>
+          <g id="layout::subtitle.4-5-4-5.1" class="viewport"/>
+          <g id="layout::title.3-5-3-5.1" class="viewport">
+            <g id="layout::title.3-5-3-5::GRID.VP.29.1" font-size="16.8" stroke="rgb(255,255,255)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke-opacity="1" font-weight="normal" font-style="normal" class="viewport">
+              <g id="layout::title.3-5-3-5::GRID.VP.29::GRID.VP.30.1" class="viewport">
+                <g id="title.3-5-3-5.1" class="forcedgrob gTableChild titleGrob gTree grob gDesc">
+                  <g id="GRID.text.151.1" class="text grob gDesc">
+                    <g id="GRID.text.151.1.1" transform="translate(24.1, 317.03)" stroke-width="0.1">
+                      <g id="GRID.text.151.1.1.scale" transform="scale(1, -1)">
+                        <text x="0" y="0" id="GRID.text.151.1.1.text" text-anchor="start" font-size="16.8" stroke="rgb(255,255,255)" font-family="Oswald, Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" fill="rgb(255,255,255)" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+                          <tspan id="GRID.text.151.1.1.tspan.1" dy="13.61" x="0">MONTHLY NIGHTS OVER 20 °C</tspan>
+                        </text>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="layout::caption.10-5-10-5.1" class="viewport"/>
+          <g id="layout::tag.2-2-2-2.1" class="viewport"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
