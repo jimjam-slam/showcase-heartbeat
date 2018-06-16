@@ -9,14 +9,14 @@ function update_chart(date) {
 
   // the svg export process uses a random number. need to update if I re-export!
   // also, jquery needs a different context to handle the svg
-  var root_seed = '125',
-      root_node_id = 'GRID.polyline.' + root_seed + '.1',
-      svg_root = document.getElementById('ts_chart').contentDocument;
+  var svg_root = document.getElementById('ts_chart').contentDocument,
+      root_seed = '125',
+      polyline_root_id = 'GRID.polyline.' + root_seed + '.1';
 
   var current_year = Math.ceil(
     moment(date).diff(moment('1939-12-01'), 'months') / 12);
   var last_year =
-    svg_root.getElementById(root_node_id).childElementCount;
+    svg_root.getElementById(polyline_root_id).childElementCount;
 
   /* geom series adds '.n' to the root node id, where n is the year number (1:n)   this would prolly be easier if i'd grid.garnish()ed the svg... */
   
@@ -24,14 +24,14 @@ function update_chart(date) {
   for (i = 1; i < current_year; i++) {
     console.log('Showing year ' + i);
     svg_root
-      .getElementById(root_node_id + '.' + i)
+      .getElementById(polyline_root_id + '.' + i)
       .setAttribute('stroke-opacity', '1');
   }
   // ... and hide the forthcoming years
   for (i = Math.max(1, current_year + 1); i <= last_year; i++) {
     console.log('Hiding year ' + i);
     svg_root
-    .getElementById(root_node_id + '.' + i)
+    .getElementById(polyline_root_id + '.' + i)
     .setAttribute('stroke-opacity', '0');
   }
   
@@ -39,7 +39,7 @@ function update_chart(date) {
   if (current_year > 0) {
     console.log('Showing current year ' + current_year);
     svg_root
-    .getElementById(root_node_id + '.' + current_year)
+    .getElementById(polyline_root_id + '.' + current_year)
     .setAttribute('stroke-opacity', '1');
   }
 }
