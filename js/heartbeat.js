@@ -67,7 +67,7 @@ var geoserver_base = 'https://climdex.org/geoserver/showcase/wms?',
           transparent: true,
           updateWhenIdle: false
         }),
-      { cache: 67 }).addTo(mymap);
+      { cache: 894 }).addTo(mymap);
       
 // set initial view (and ensure it recalculates on container resize)
 function reset_view() {
@@ -86,7 +86,48 @@ function reset_view() {
 reset_view();
 mymap.on('resize', reset_view);
 
+/* chart setup */
+
+// when the chart's loaded...
 var chart = document.getElementById('ts_chart');
 chart.addEventListener('load', function() {
+  
+  // allow the chart to be updated in response to the time dimension
   chart_loaded = true;
-})
+
+  var frame_count = hb_layer.options.cache;
+
+  // prefetch the frames, and get things going when they're all here
+  function _prefetch_animation() {
+    td.off('timeload', _prefetch_animation, this);
+    console.log('New limits are ' + [
+      td._lowerLimit, td._currentTimeIndex, td._upperLimit]);
+
+    /* prefetch the animation frames, then play when we have them */
+    hb_layer.on('timeload', _check_to_play, this);
+    console.log('Fetching ' + frame_count + ' frames before starting; ' +
+      td.getNumberNextTimesReady(1, frame_count, true) +
+      ' already available');
+    td.prepareNextTimes(1, frame_count, true);
+  }
+
+  function _check_to_play() {
+    if (td.getNumberNextTimesReady(1, frame_count, true) < frame_count) {
+      // still waiting
+      console.log('Waiting (' +
+        td.getNumberNextTimesReady(1, frame_count, true) + ' of ' +
+        frame_count + ' frames ready)')
+    } else {
+      // ready!
+      // console.log('let\'s go');
+      hb_layer.off('timeload', _check_to_play, this);
+      // td.off('timeload', preload_storybit_frames, this);
+      td.setCurrentTimeIndex(0);
+      td_player.start();
+    }
+  }
+
+  // set the timedimension to first frame
+  td.on('timeload', _prefetch_animation, this);
+  td.setCurrentTimeIndex(0);
+});

@@ -22,14 +22,14 @@ function update_chart(date) {
   
   // display the years before the current one...
   for (i = 1; i < current_year; i++) {
-    console.log('Showing year ' + i);
+    // console.log('Showing year ' + i);
     svg_root
       .getElementById(polyline_root_id + '.' + i)
       .setAttribute('stroke-opacity', '1');
   }
   // ... and hide the forthcoming years
   for (i = Math.max(1, current_year + 1); i <= last_year; i++) {
-    console.log('Hiding year ' + i);
+    // console.log('Hiding year ' + i);
     svg_root
     .getElementById(polyline_root_id + '.' + i)
     .setAttribute('stroke-opacity', '0');
@@ -37,7 +37,7 @@ function update_chart(date) {
   
   // what to do with the current year? show it for now
   if (current_year > 0) {
-    console.log('Showing current year ' + current_year);
+    // console.log('Showing current year ' + current_year);
     svg_root
     .getElementById(polyline_root_id + '.' + current_year)
     .setAttribute('stroke-opacity', '1');
