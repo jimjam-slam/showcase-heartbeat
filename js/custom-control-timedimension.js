@@ -13,35 +13,19 @@ function update_chart(date) {
       root_node_id = 'GRID.polyline.' + root_seed + '.1',
       svg_root = document.getElementById('ts_chart').contentDocument;
 
-  console.log('Do we have an SVG root?');
-  console.log(svg_root);
-  console.log(svg_root.firstChild.tagName);   // "svg" if loaded
-  // test in case the seed exported by gridSVG is old
-  if ($(root_node_id, svg_root) == null) {
-    console.error('Chart root node, ' + root_node_id + ', does not exist. ' +
-      'If the chart has been re-exported, the root seed needs to be updated.');
-  }
-
   var current_year = Math.ceil(
     moment(date).diff(moment('1939-12-01'), 'months') / 12);
   var last_year =
     svg_root.getElementById(root_node_id).childElementCount;
 
-  console.log('Updating chart to ' + date);
-  console.log('Select date minus Dec 1939 is ' + current_year + ' years');
-  console.log('Number of years in chart: ' + last_year);
-
-  // geom series adds '.n', where n is the year number (1:n) in years since
-  // dec 1939. this would prolly be easier if i'd grid.garnish()ed the svg...
+  /* geom series adds '.n' to the root node id, where n is the year number (1:n)   this would prolly be easier if i'd grid.garnish()ed the svg... */
   
-
   // display the years before the current one...
   for (i = 1; i < current_year; i++) {
     console.log('Showing year ' + i);
     svg_root
       .getElementById(root_node_id + '.' + i)
       .setAttribute('stroke-opacity', '1');
-    // $(root_node_id + '.' + i, svg_root).attr('stroke-opacity', '1');
   }
   // ... and hide the forthcoming years
   for (i = Math.max(1, current_year + 1); i <= last_year; i++) {
@@ -49,17 +33,14 @@ function update_chart(date) {
     svg_root
     .getElementById(root_node_id + '.' + i)
     .setAttribute('stroke-opacity', '0');
-    // $(root_node_id + '.' + i, svg_root).attr('stroke-opacity', '0');
   }
   
   // what to do with the current year? show it for now
   if (current_year > 0) {
-
     console.log('Showing current year ' + current_year);
     svg_root
     .getElementById(root_node_id + '.' + current_year)
     .setAttribute('stroke-opacity', '1');
-    // $(root_node_id + '.' + current_year, svg_root).attr('stroke-opacity', '1');
   }
 }
 
