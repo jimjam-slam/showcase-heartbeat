@@ -100,8 +100,6 @@ chart.addEventListener('load', function() {
   // prefetch the frames, and get things going when they're all here
   function _prefetch_animation() {
     td.off('timeload', _prefetch_animation, this);
-    console.log('New limits are ' + [
-      td._lowerLimit, td._currentTimeIndex, td._upperLimit]);
 
     /* prefetch the animation frames, then play when we have them */
     hb_layer.on('timeload', _check_to_play, this);
