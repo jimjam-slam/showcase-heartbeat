@@ -1,13 +1,17 @@
 /* custom timedimension control */
 
-var chart_loaded = false;
 /* update_chart: manipulate the chart based on the supplied date. mostly this means manipulating the geom opacity. will inject into the timedimension code (can't see an event to use!) */
+var chart_loaded = false;
 function update_chart(date) {
   // bail out if the chart isn't ready
   if (!chart_loaded) return;
 
-  // the svg export process uses a random number. need to update if I re-export!
-  // also, jquery needs a different context to handle the svg
+  /* the svg export process uses a random number. need to update it if I
+     re-export the file from r!
+     
+     each bar has '.n' appended to the group root id, but i've also garnished
+     each with data attributes, as well as a css class distinguishing pos. and
+     neg. bars */
   var svg_root = document.getElementById('ts_chart').contentDocument,
       root_seed = '12',
       geom_root_id = 'geom_rect.rect.' + root_seed + '.1',
@@ -17,20 +21,13 @@ function update_chart(date) {
 
   /* geom series adds '.n' to the root node id, where n is the year number (1:n)   this would prolly be easier if i'd grid.garnish()ed the svg... */
 
-  // for each year, either reveal or hide depending on 
+  // show the past and present years; hide the future ones
   for (i = 1; i <= bar_count; i++) {
     var bar_i = svg_root.getElementById(geom_root_id + '.' + i);
-    console.log('Bar ' + i + ': ' + bar_i.getAttribute('data-year'));
-    
-    // if earlier, hide it
-    if (parseInt(bar_i.getAttribute('data-year')) < current_year) {
-      console.log('Hiding');
+    if (parseInt(bar_i.getAttribute('data-year')) < current_year)
       bar_i.classList.remove('toggled_off');
-    }
-    else {
-      console.log('Showing');
+    else
       bar_i.classList.add('toggled_off');
-    }
   }
 }
 
