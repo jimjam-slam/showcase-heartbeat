@@ -95,14 +95,20 @@ chart.addEventListener('load', function() {
   // allow the chart to be updated in response to the time dimension
   chart_loaded = true;
 
-  // attach animation css to bars
+  // attach animation classes to bars (could've just done from r...)
   var svg_root = document.getElementById('ts_chart').contentDocument,
-      root_seed = '1427',
+      root_seed = '12',
       geom_root_id = 'geom_rect.rect.' + root_seed + '.1',
       bars = svg_root.getElementById(geom_root_id).children;
-  for (i = 0; i < bars.length; i++) {
-    bars[i].style.transition = 'opacity 0.3s linear'
-  }
+  // for (i = 0; i < bars.length; i++) {
+  //   if (bars[i].getAttribute('data-positive') == 'TRUE') {
+  //     bars[i].classList.add('chart_bar_pos');
+  //   } else {
+  //     bars[i].classList.add('chart_bar_neg');
+  //   }
+    
+    // bars[i].style.transition = 'opacity 0.3s linear'
+  // }
 
   // var frame_count = hb_layer.options.cache;
 

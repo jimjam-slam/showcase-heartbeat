@@ -9,7 +9,7 @@ function update_chart(date) {
   // the svg export process uses a random number. need to update if I re-export!
   // also, jquery needs a different context to handle the svg
   var svg_root = document.getElementById('ts_chart').contentDocument,
-      root_seed = '1427',
+      root_seed = '12',
       geom_root_id = 'geom_rect.rect.' + root_seed + '.1',
       current_year = moment(date).year(),
       bar_count = svg_root.getElementById(geom_root_id).childElementCount;
@@ -25,14 +25,13 @@ function update_chart(date) {
     // if earlier, hide it
     if (parseInt(bar_i.getAttribute('data-year')) < current_year) {
       console.log('Hiding');
-      bar_i.style.opacity = 1;
+      bar_i.classList.remove('toggled_off');
     }
     else {
       console.log('Showing');
-      bar_i.style.opacity = 0;
+      bar_i.classList.add('toggled_off');
     }
   }
-
 }
 
 L.Control.TimeDimensionCustom = L.Control.TimeDimension.include({
