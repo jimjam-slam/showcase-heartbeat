@@ -3,45 +3,36 @@
 var chart_loaded = false;
 /* update_chart: manipulate the chart based on the supplied date. mostly this means manipulating the geom opacity. will inject into the timedimension code (can't see an event to use!) */
 function update_chart(date) {
-
   // bail out if the chart isn't ready
   if (!chart_loaded) return;
 
   // the svg export process uses a random number. need to update if I re-export!
   // also, jquery needs a different context to handle the svg
   var svg_root = document.getElementById('ts_chart').contentDocument,
-      root_seed = '125',
-      polyline_root_id = 'GRID.polyline.' + root_seed + '.1';
-
-  var current_year = Math.ceil(
-    moment(date).diff(moment('1939-12-01'), 'months') / 12);
-  var last_year =
-    svg_root.getElementById(polyline_root_id).childElementCount;
+      root_seed = '1427',
+      geom_root_id = 'geom_rect.rect.' + root_seed + '.1',
+      current_year = moment(date).year(),
+      bar_count = svg_root.getElementById(geom_root_id).childElementCount;
+  console.log('Updating chart... current year = ' + current_year);
 
   /* geom series adds '.n' to the root node id, where n is the year number (1:n)   this would prolly be easier if i'd grid.garnish()ed the svg... */
-  
-  // display the years before the current one...
-  for (i = 1; i < current_year; i++) {
-    // console.log('Showing year ' + i);
-    svg_root
-      .getElementById(polyline_root_id + '.' + i)
-      .setAttribute('stroke-opacity', '1');
+
+  // for each year, either reveal or hide depending on 
+  for (i = 1; i <= bar_count; i++) {
+    var bar_i = svg_root.getElementById(geom_root_id + '.' + i);
+    console.log('Bar ' + i + ': ' + bar_i.getAttribute('data-year'));
+    
+    // if earlier, hide it
+    if (parseInt(bar_i.getAttribute('data-year')) < current_year) {
+      console.log('Hiding');
+      bar_i.style.opacity = 1;
+    }
+    else {
+      console.log('Showing');
+      bar_i.style.opacity = 0;
+    }
   }
-  // ... and hide the forthcoming years
-  for (i = Math.max(1, current_year + 1); i <= last_year; i++) {
-    // console.log('Hiding year ' + i);
-    svg_root
-    .getElementById(polyline_root_id + '.' + i)
-    .setAttribute('stroke-opacity', '0');
-  }
-  
-  // what to do with the current year? show it for now
-  if (current_year > 0) {
-    // console.log('Showing current year ' + current_year);
-    svg_root
-    .getElementById(polyline_root_id + '.' + current_year)
-    .setAttribute('stroke-opacity', '1');
-  }
+
 }
 
 L.Control.TimeDimensionCustom = L.Control.TimeDimension.include({
