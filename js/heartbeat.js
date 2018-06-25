@@ -7,7 +7,8 @@ var td = new L.TimeDimension({
   period: 'P1M'
 });
 var td_player = new L.TimeDimension.Player({
-  buffer: 5,     // control to taste
+  buffer: 12,     // control to taste
+  minBufferReady: 48,
   loop: true,
   transitionTime: 80,
   startOver: false
@@ -25,7 +26,7 @@ var td_control = new L.Control.TimeDimension({
 var mymap = L.map('map', {
   center: [-27, 134],     // lat, lon
   zoom: 4,
-  zoomSnap: 0.5,             // defualt 1
+  zoomSnap: 0.5,          // defualt 1
   crs: L.CRS.EPSG4326,    // need a matching basemap!
   zoomControl: false,
   attributionControl: false, // it's on the about screen instead
@@ -60,14 +61,16 @@ var geoserver_base = 'https://climdex.org/geoserver/showcase/wms?',
           version: '1.1.0',
           request: 'GetMap',
           layers: 'hb_tn_gt20_mth',
+          bounds: L.latLngBounds([[-9.75, 111.75], [-43.75, 155.75]]),
           // env: 'low:0;high:31',
           srs: 'EPSG:4326',
           format: 'image/png',
           // className: 'blend_multiply',
           transparent: true,
+          tiled: true,        // allows tile caching
           updateWhenIdle: false
         }),
-      { cache: 894 }).addTo(mymap);
+      { cacheBackward: 0, cacheForward: 144 }).addTo(mymap);
       
 // set initial view (and ensure it recalculates on container resize)
 function reset_view() {
@@ -95,52 +98,37 @@ chart.addEventListener('load', function() {
   // allow the chart to be updated in response to the time dimension
   chart_loaded = true;
 
-  // attach animation classes to bars (could've just done from r...)
-  var svg_root = document.getElementById('ts_chart').contentDocument,
-      root_seed = '12',
-      geom_root_id = 'geom_rect.rect.' + root_seed + '.1',
-      bars = svg_root.getElementById(geom_root_id).children;
-  // for (i = 0; i < bars.length; i++) {
-  //   if (bars[i].getAttribute('data-positive') == 'TRUE') {
-  //     bars[i].classList.add('chart_bar_pos');
-  //   } else {
-  //     bars[i].classList.add('chart_bar_neg');
-  //   }
-    
-    // bars[i].style.transition = 'opacity 0.3s linear'
-  // }
+  var frame_count = hb_layer.options.cacheForward;
 
-  // var frame_count = hb_layer.options.cache;
+  // prefetch the frames, and get things going when they're all here
+  function _prefetch_animation() {
+    td.off('timeload', _prefetch_animation, this);
 
-  // // prefetch the frames, and get things going when they're all here
-  // function _prefetch_animation() {
-  //   td.off('timeload', _prefetch_animation, this);
+    /* prefetch the animation frames, then play when we have them */
+    hb_layer.on('timeload', _check_to_play, this);
+    console.log('Fetching ' + frame_count + ' frames before starting; ' +
+      td.getNumberNextTimesReady(1, frame_count, true) +
+      ' already available');
+    td.prepareNextTimes(1, frame_count, true);
+  }
 
-  //   /* prefetch the animation frames, then play when we have them */
-  //   hb_layer.on('timeload', _check_to_play, this);
-  //   console.log('Fetching ' + frame_count + ' frames before starting; ' +
-  //     td.getNumberNextTimesReady(1, frame_count, true) +
-  //     ' already available');
-  //   td.prepareNextTimes(1, frame_count, true);
-  // }
+  function _check_to_play() {
+    if (td.getNumberNextTimesReady(1, frame_count, true) < frame_count) {
+      // still waiting
+      console.log('Waiting (' +
+        td.getNumberNextTimesReady(1, frame_count, true) + ' of ' +
+        frame_count + ' frames ready)')
+    } else {
+      // ready!
+      // console.log('let\'s go');
+      hb_layer.off('timeload', _check_to_play, this);
+      // td.off('timeload', preload_storybit_frames, this);
+      td.setCurrentTimeIndex(0);
+      td_player.start();
+    }
+  }
 
-  // function _check_to_play() {
-  //   if (td.getNumberNextTimesReady(1, frame_count, true) < frame_count) {
-  //     // still waiting
-  //     console.log('Waiting (' +
-  //       td.getNumberNextTimesReady(1, frame_count, true) + ' of ' +
-  //       frame_count + ' frames ready)')
-  //   } else {
-  //     // ready!
-  //     // console.log('let\'s go');
-  //     hb_layer.off('timeload', _check_to_play, this);
-  //     // td.off('timeload', preload_storybit_frames, this);
-  //     td.setCurrentTimeIndex(0);
-  //     td_player.start();
-  //   }
-  // }
-
-  // // set the timedimension to first frame
-  // td.on('timeload', _prefetch_animation, this);
-  // td.setCurrentTimeIndex(0);
+  // set the timedimension to first frame
+  td.on('timeload', _prefetch_animation, this);
+  td.setCurrentTimeIndex(0);
 });
