@@ -68,9 +68,10 @@ var geoserver_base = 'https://climdex.org/geoserver/showcase/wms?',
           // className: 'blend_multiply',
           transparent: true,
           tiled: true,        // allows tile caching
+          zIndex: 2,
           updateWhenIdle: false
         }),
-      { cacheBackward: 0, cacheForward: 144 }).addTo(mymap);
+      { cacheBackward: 894, cacheForward: 894, zIndex: 2 }).addTo(mymap);
       
 // set initial view (and ensure it recalculates on container resize)
 function reset_view() {
@@ -88,12 +89,15 @@ function reset_view() {
 }
 reset_view();
 mymap.on('resize', reset_view);
+td.setCurrentTime(0);
+td.setCurrentTimeIndex(0);
 
 /* chart setup */
-
+console.log('Map layers initialised.')
 // when the chart's loaded...
 var chart = document.getElementById('ts_chart');
 chart.addEventListener('load', function() {
+  console.log('Chart loaded; beginning map layer caching...')
   
   // allow the chart to be updated in response to the time dimension
   chart_loaded = true;
@@ -113,17 +117,21 @@ chart.addEventListener('load', function() {
   }
 
   function _check_to_play() {
-    if (td.getNumberNextTimesReady(1, frame_count, true) < frame_count) {
+    var frames_ready = td.getNumberNextTimesReady(1, frame_count, true);
+    if (frames_ready < frame_count) {
       // still waiting
+      
       console.log('Waiting (' +
-        td.getNumberNextTimesReady(1, frame_count, true) + ' of ' +
-        frame_count + ' frames ready)')
+        frames_ready + ' of ' +
+        frame_count + ' frames ready)');
+      $('#progress-msg').html(
+        'Loading: ' +
+        parseFloat(frames_ready / frame_count * 100).toFixed(1) + '%');
     } else {
       // ready!
-      // console.log('let\'s go');
       hb_layer.off('timeload', _check_to_play, this);
       // td.off('timeload', preload_storybit_frames, this);
-      td.setCurrentTimeIndex(0);
+      $('#map-blackout').removeClass('toggled_on');
       td_player.start();
     }
   }

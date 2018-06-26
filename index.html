@@ -1,6 +1,46 @@
 <html>
   <head>
-      <title>Heartbeat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    
+    <title>The Heartbeat of Australian Extremes</title>
+    <meta name="author" property="author"
+      content="ARC Centre of Excellence for Climate System Science">
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- facebook sharing -->
+    <meta property="fb:app_id" content="1583566641860122">
+    <meta property="og:title" content="The Heartbeat of Australian Extremes">
+    <meta property="og:site_name" content="The Heartbeat of Australian Extremes">
+    <meta property="og:url" content="https://heartbeatofextremes.com">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="pwa/twitter.png">
+    <meta property="og:type" content="website">
+
+    <!-- twitter sharing -->
+    <meta name="twitter:title" content="The Heartbeat of Australian Extremes">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:url" content="https://heartbeatofextremes.com">
+    <meta name="twitter:site" content="The Heartbeat of Australian Extremes">
+    <meta name="twitter:creator" content="@ClimateSystem">
+    <meta name="twitter:domain" content="https://heartbeatofextremes.com">
+    <meta property="twitter:image" content="pwa/twitter.png">
+
+    <!-- mobile web app config -->
+    <link rel="apple-touch-icon" href="pwa/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="pwa/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+      href="pwa/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+      href="pwa/touch-icon-ipad-retina.png">
+    <link rel="icon" sizes="192x192" href="pwa/icon-192.png">
+    <link rel="icon" sizes="128x128" href="pwa/icon-128.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#222222">
+    <link rel="manifest" href="pwa/manifest.json">
     
       <!-- leaflet and friends -->
       <link
@@ -56,7 +96,7 @@
   </head>
   <body>
     <header>
-      <h1>Heartbeat of Extremes</h1>
+      <h1></h1>
       <ul class="climdex-nav-main">
         <li id="nav-about">About</li>
       </ul>
@@ -74,8 +114,11 @@
     </div>
     <div id="about">
       <div id="about-content">
-        <h1>Heartbeat of Extremes</h1>
-        <p>Lorem ipsum dolor sit amet, pro nusquam deserunt concludaturque ne. Has ea affert splendide referrentur, cu vero semper fabellas est, in modo timeam detracto mei. Est ut praesent repudiare, nec legendos moderatius ut, sed nostrud alterum mediocritatem no. Porro convenire te pro. Mazim dignissim reprimique eos ea, labores habemus torquatos vix et.</p>
+        <h1>The Heartbeat of Australian Extremes</h1>
+        <p>Australia has always been a land of extremes—but climate change is making those extremes worse.</p>
+        <p>Here, we show the observed changes in hot nights (those that do not fall below 20 °C) across Australia over the past 70 years. As each summer begins, heat grows outward from northern Australia, reaching southward—and receding again, as autun arrives. But, as the decades have worn on, this heat has reached a little further south.</p>
+        <p>Hot nights are particularly difficult for young, elderly and sick Australians—all of whom are vulnerable to heat stress. Climate models show that we can expect hot nights to become more frequent still unless climate change is mitigated.</p>
+        <p>The Heartbeat of Australian Extremes was created by <a href="https://andrewdking.weebly.com">Dr Andrew King</a> and <a href="https://rensa.co">Mr James Goldie</a> of the <a href="http://climatescience.org.au/">ARC Centre of Cliate System Science</a>. It uses data from the <a href="www.bom.gov.au/jsp/awap/">Australian Water Availability Project</a>.</p>
         <div class="action_bar">
           <button id="close-about" aria-label="Close">
             <i class="fas fa-times"></i>
@@ -89,9 +132,10 @@
         <p>Play random stories for as long as you like.</p>
       </button>
     </div>
-    <div id="map-blackout">
+    <div id="map-blackout" class="toggled_on">
+      <h1>The Heartbeat of Australian Extremes</h1>
       <i class="fas fa-4x fa-spin fa-cog"></i>
-      <h2>Loading story...</h2>
+      <h2 id="progress-msg">Loading: 0%</h2>
     </div>
     <!-- <h1 id="tour-interrupt-msg">Click to explore the data</h1> -->
     <script src="js/custom-control-timedimension.js"></script>

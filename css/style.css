@@ -29,11 +29,11 @@ html, body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: #f00;
+  background-color: #222;
   color: #666;
   font-size: 1.5em;
   
-  z-index: 1002;
+  z-index: 1003;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s linear, opacity 0.3s linear;
@@ -41,7 +41,12 @@ html, body {
 
 #map-blackout.toggled_on {
   visibility: visible;
-  opacity: 0.3;        /* DEBUG - make 1 for production */
+  opacity: 1;        /* DEBUG - make 1 for production */
+}
+
+#map-blackout h1 {
+  color: white;
+  margin-bottom: 0.75em;
 }
 
 #map-blackout h2 {
@@ -518,7 +523,7 @@ div#about a:active, div#about a:hover, div#about a:visited
 }
 
 .leaflet-bar-timecontrol .leaflet-control-timecontrol,
-.leaflet-bar-timecontrol .leaflet-control-timecontrol {
+.leaflet-bar-timecontrol .leaflet-control-timecontrol.loading {
   background: none;
   border: 0;
   color: #666;
@@ -529,7 +534,12 @@ div#about a:active, div#about a:hover, div#about a:visited
 .leaflet-bar-timecontrol .leaflet-control-timecontrol:hover {
   background: none;
   border: 0;
-  color: black;
+  color: white;
+}
+
+/* hide the loading percentage (since we do all the loading up front here) */
+.leaflet-bar-timecontrol .leaflet-control-timecontrol.timecontrol-play span {
+  visibility: hidden;
 }
 
 a.leaflet-control-timecontrol.timecontrol-date,
