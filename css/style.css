@@ -780,6 +780,7 @@ form.leaflet-control-layers-list input[type="radio"]:disabled ~ p {
 
 .wms-legend-label {
   text-shadow: 1px 1px #666;
+  color: #ccc;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 1em;
