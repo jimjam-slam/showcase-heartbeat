@@ -1,0 +1,22 @@
+{
+  "name": "The Heartbeat of Australian Extremes",
+  "short_name": "Heartbeat",
+  "description": "Observed changes in hot nights across Australia over the past 70 years.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#222222",
+  "background_color": "#222222",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
