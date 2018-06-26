@@ -1,7 +1,7 @@
 {
   "name": "The Heartbeat of Australian Extremes",
   "short_name": "Heartbeat",
-  "description": "Observed changes in hot nights across Australia over the past 70 years.",
+  "description": "A visualisation of observed changes in hot nights across Australia over the past 70 years.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "any",
