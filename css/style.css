@@ -758,7 +758,7 @@ form.leaflet-control-layers-list input[type="radio"]:disabled ~ p {
 
 .leaflet-bottom.leaflet-right .leaflet-control {
   margin-right: 2px;
-  margin-bottom: 2px;
+  margin-bottom: 52px;
 }
 
 .leaflet-control-wms-legend, .leaflet-control-wms-legend:hover {
@@ -767,10 +767,6 @@ form.leaflet-control-layers-list input[type="radio"]:disabled ~ p {
   display: flex;
   flex: row nowrap;
   align-items: flex-start;
-}
-
-.leaflet-bottom.leaflet-right .leaflet-control.legend-on-timebar {
-  margin-bottom: 52px;
 }
 
 .leaflet-control-wms-legend.wms-legend-collapsed {
@@ -783,7 +779,7 @@ form.leaflet-control-layers-list input[type="radio"]:disabled ~ p {
 }
 
 .wms-legend-label {
-  text-shadow: 1px 1px #ccc;
+  text-shadow: 1px 1px #666;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 1em;
