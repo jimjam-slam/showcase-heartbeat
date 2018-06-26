@@ -13,7 +13,7 @@ function update_chart(date) {
      each with data attributes, as well as a css class distinguishing pos. and
      neg. bars */
   var svg_root = document.getElementById('ts_chart').contentDocument,
-      root_seed = '12',
+      root_seed = '65',
       geom_root_id = 'geom_rect.rect.' + root_seed + '.1',
       current_year = moment(date).year(),
       bar_count = svg_root.getElementById(geom_root_id).childElementCount;

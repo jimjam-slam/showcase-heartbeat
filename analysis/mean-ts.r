@@ -42,7 +42,7 @@ hb_theme = theme(
   panel.grid.minor.x = element_blank(),
   panel.grid.minor.y = element_blank(),
   panel.grid.major.y = element_line(colour = "#666666"),
-  axis.title.x = element_text(colour = 'white', margin = margin(t = 7)),
+  axis.title.x = element_text(colour = 'white', margin = margin(t = 9)),
   axis.text = element_text(colour = "#666666"),
   plot.subtitle = element_text(colour = '#666666'),
   plot.title = element_text(colour = '#999999'))
@@ -63,8 +63,8 @@ mts_barplot =
     labs(
       x = 'YEAR',
       y = NULL,
-      title = 'MONTHLY NIGHTS OVER 20 °C',
-      subtitle = 'RELATIVE TO THE 1940–2013 AVERAGE')
+      title = 'AUSTRALIAN AVERAGE NIGHTS OVER 20 °C EACH YEAR',
+      subtitle = 'RELATIVE TO THE 1940–2013 AVERAGE (101.65 PER YEAR)')
 
 # ggplot alters the order of the bars before plotting: negative bars are ordered
 # before positive ones. i've manually sorted the data here, but in future i can
