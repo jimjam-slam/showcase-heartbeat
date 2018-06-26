@@ -69,8 +69,8 @@ html, body {
 
 header {
   height: 50px;
-  width: calc(100vw - 60px);
-  padding: 0 30px;
+  width: calc(100vw - 20px);
+  padding: 0 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -83,6 +83,10 @@ header {
 
   background-color: none;
   color: #eee;
+}
+
+header u1 {
+  margin: 0;
 }
 
 h1, h2, button {
