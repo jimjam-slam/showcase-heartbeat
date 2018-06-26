@@ -69,8 +69,8 @@ html, body {
 
 header {
   height: 50px;
-  width: calc(100vw - 20px);
-  padding: 0 10px;
+  width: calc(100vw - 60px);
+  padding: 0 30px;
   position: absolute;
   top: 0;
   left: 0;
@@ -523,7 +523,8 @@ div#about a:active, div#about a:hover, div#about a:visited
 }
 
 .leaflet-bar-timecontrol .leaflet-control-timecontrol,
-.leaflet-bar-timecontrol .leaflet-control-timecontrol.loading {
+.leaflet-bar-timecontrol .leaflet-control-timecontrol.loading,
+.leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-play.loading, {
   background: none;
   border: 0;
   color: #666;
