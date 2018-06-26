@@ -72,6 +72,16 @@ var geoserver_base = 'https://climdex.org/geoserver/showcase/wms?',
           updateWhenIdle: false
         }),
       { cacheBackward: 894, cacheForward: 894, zIndex: 2 }).addTo(mymap);
+
+// initialise legend
+var legend_dpi = 91;
+var legend_url = geoserver_base +
+  'REQUEST=GetLegendGraphic&VERSION=1.1.0&&FORMAT=image/png&height=12&' +
+  'LEGEND_OPTIONS=fontName:Oswald;fontSize:12;fontColor:0x000000;dx:5;layout:horizontal;' +
+  'dpi:' + legend_dpi +
+  '&transparent=true&layer=hb_tn_gt20_mth'
+var legend = L.wmsLegend('img/1x1.png');
+legend.update(legend_url, '0 days/mth', '30 days/mth');
       
 // set initial view (and ensure it recalculates on container resize)
 function reset_view() {
@@ -139,4 +149,6 @@ chart.addEventListener('load', function() {
   // set the timedimension to first frame
   td.on('timeload', _prefetch_animation, this);
   td.setCurrentTimeIndex(0);
+
+
 });
