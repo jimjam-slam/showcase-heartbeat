@@ -526,25 +526,19 @@ div#about a:active, div#about a:hover, div#about a:visited
   width: 100%;
 }
 
-.leaflet-bar-timecontrol .leaflet-control-timecontrol,
-.leaflet-bar-timecontrol .leaflet-control-timecontrol.loading,
-.leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-play.loading, {
-  background: none;
-  border: 0;
-  color: #666;
-  min-width: 30px;
-  width: 30px;
-}
-
-.leaflet-bar-timecontrol .leaflet-control-timecontrol:hover {
-  background: none;
-  border: 0;
-  color: white;
-}
-
 /* hide the loading percentage (since we do all the loading up front here) */
 .leaflet-bar-timecontrol .leaflet-control-timecontrol.timecontrol-play span {
   visibility: hidden;
+}
+
+a.leaflet-control-timecontrol.timecontrol-play,
+a.leaflet-control-timecontrol.timecontrol-play:hover,
+a.leaflet-control-timecontrol.timecontrol-play.loading {
+  min-width: 30px;
+  width: 30px;
+  background: none;
+  border: none;
+  color: #666;
 }
 
 a.leaflet-control-timecontrol.timecontrol-date,
@@ -554,10 +548,15 @@ a.leaflet-control-timecontrol.timecontrol-date.utc:hover {
   min-width: 100px;
   width: auto;
   padding-left: 30px;
+  background: none;
+  border: none;
+  color: #666;
 }
 
 .leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-date.loading,
-.leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-date.loading.utc {
+.leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-date.loading:hover,
+.leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-date.loading.utc,
+.leaflet-bar-timecontrol a.leaflet-control-timecontrol.timecontrol-date.loading.utc:hover {
   background-color: transparent;
 }
 
@@ -571,6 +570,9 @@ a.leaflet-control-timecontrol.timecontrol-date.loading.utc:before {
 .leaflet-control-timecontrol.timecontrol-slider,
 .leaflet-control-timecontrol.timecontrol-slider:hover {
   width: 100%;
+  background: none;
+  border: none;
+  color: #666;
 }
 
 .leaflet-control-timecontrol.timecontrol-slider .slider {
