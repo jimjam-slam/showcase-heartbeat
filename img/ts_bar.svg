@@ -29,6 +29,9 @@
     .toggled_off {
       transform: scale(1, 0);
     }
+
+    @import url('https://fonts.googleapis.com/css?family=Oswald');
+    
     /* ]]> */
   </style>
   <g transform="translate(0, 324) scale(1, -1)">
